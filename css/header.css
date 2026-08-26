@@ -1,0 +1,301 @@
+header {
+    padding: 0px 20px;
+}
+
+header .headerContainer {
+    max-width: 1392px;
+    width: 100%;
+    background: var(--off-white);
+    border-radius: 16px;
+    margin: 0px auto;
+    margin-top: 16px;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .leftSite {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+}
+
+header .leftSite .logo img {
+    max-width: 189px;
+    width: 100%;
+}
+
+header .leftSite ul {
+    display: flex;
+    gap: 8px;
+}
+
+header .leftSite ul li a {
+    padding: 14px 26px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    background: var(--white);
+    border-radius: 30px;
+    border: 1px solid #ECEFF3;
+    box-shadow: 0px 4px 32px 0px #0000000F;
+}
+
+
+header .rightSite {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+header .rightSite .number {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+header .rightSite .number img {
+    max-width: 20px;
+    width: 100%;
+}
+
+header .rightSite .number p {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+header .rightSite .quoteBtn {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -4%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+}
+
+header .rightSite .quoteBtn p {
+    padding: 0px 20px;
+    background: var(--light-green);
+    color: var(--white);
+    border-radius: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .rightSite .quoteBtn .quoteBtnArrow {
+    background: var(--light-green);
+    height: 100%;
+    border-radius: 50%;
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-4px);
+}
+
+header .rightSite .quoteBtn .quoteBtnArrow img {
+    max-width: 12px;
+    width: 100%;
+}
+
+header .rightSite .menuIcon {
+    display: none;
+    background: var(--light-green);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+header .rightSite .menuIcon img {
+    max-width: 18px;
+    width: 100%;
+}
+
+header .phoneSideMenu {
+    display: none;
+}
+
+
+@media screen and (max-width: 1300px) {
+    header .leftSite .logo img {
+        max-width: 150px;
+    }
+
+    header .leftSite ul li a {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    header .rightSite .number img {
+        max-width: 18px;
+    }
+
+    header .rightSite .number p {
+        font-size: 14px;
+    }
+
+    header .rightSite .quoteBtn {
+        font-size: 14px;
+    }
+
+    header .rightSite .quoteBtn p {
+        padding: 0px 18px;
+    }
+
+    header .rightSite .quoteBtn .quoteBtnArrow img {
+        max-width: 10px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    header .leftSite {
+        gap: 24px;
+    }
+
+    header .leftSite .logo img {
+        max-width: 120px;
+    }
+
+    header .leftSite ul li a {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    header .rightSite .number img {
+        max-width: 14px;
+    }
+
+    header .rightSite .number p {
+        font-size: 12px;
+    }
+
+    header .rightSite .quoteBtn {
+        font-size: 12px;
+    }
+
+    header .rightSite .quoteBtn p {
+        padding: 0px 14px;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 950px) {
+
+    header .leftSite .headerMenu,
+    header .rightSite .number,
+    header .rightSite .quoteBtn {
+        display: none;
+    }
+
+    header .rightSite .menuIcon {
+        display: flex;
+    }
+
+    header .phoneSideMenu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        max-width: 500px;
+        width: 100%;
+        height: 100vh;
+        background: var(--off-white);
+        z-index: 9999;
+        box-shadow: 1px 0px 8px 0px #0000001A;
+        transform: translateX(-105%);
+        visibility: hidden;
+        transition: transform 0.35s ease-in-out, visibility 0.35s;
+    }
+
+    header .phoneSideMenu.active {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    header .phoneSideMenu .phoneMenuHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        border-bottom: 1px solid #00000034;
+    }
+
+    header .phoneSideMenu .phoneMenuHeader .closeIcon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
+
+    header .phoneSideMenu .phoneMenuHeader .closeIcon img {
+        max-width: 28px;
+        width: 100%;
+    }
+
+    header .phoneSideMenu .phoneMenuHeader .logo img {
+        max-width: 120px;
+        width: 100%;
+    }
+
+    header .phoneSideMenu .phoneMenuBody {
+        padding: 20px;
+    }
+
+    header .phoneSideMenu .phoneMenuBody ul {
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+    }
+
+    header .phoneSideMenu .phoneMenuBody ul li a {
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: -2%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header .leftSite .logo img {
+        max-width: 94.97050476074219px;
+        width: 100%;
+    }
+
+    header {
+        padding: 0px 0px;
+    }
+
+    header .headerContainer {
+        margin: 0px auto;
+        padding: 20px;
+        background: none;
+    }
+
+    header .phoneSideMenu .phoneMenuBody ul li a {
+        font-size: 16px;
+    }
+}

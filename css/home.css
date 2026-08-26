@@ -1,0 +1,425 @@
+/* ===================================================================================================================== */
+/* hero section */
+/* ===================================================================================================================== */
+section.heroSection {
+    padding: 0px 20px;
+    margin-top: 24px;
+}
+
+section.heroSection .heroContainer {
+    max-width: 1393px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+section.heroSection .heroContainer .maskingArea {
+    width: 100%;
+    height: 100%;
+    background: url("/assets/hero-background-pc.png") no-repeat center center;
+    background-size: cover;
+    padding: 490px 40px 47px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    -webkit-mask-image: url("/assets/hero-background-pc-mask.png");
+    mask-image: url("/assets/hero-background-pc-mask.png");
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+section.heroSection .heroContainer .review-hero {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    background: #00000054;
+    border: 1px solid #FFFFFF52;
+    box-shadow: 0px 4px 32px 0px #0000000F;
+    border-radius: 30px;
+}
+
+section.heroSection .heroContainer .review-hero img.google-icon {
+    max-width: 16px;
+    width: 100%;
+}
+
+section.heroSection .heroContainer .review-hero h5 {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+section.heroSection .heroContainer .review-hero .stars {
+    display: flex;
+    align-items: center;
+}
+
+section.heroSection .heroContainer .review-hero .stars img {
+    max-width: 16px;
+    width: 100%;
+}
+
+section.heroSection .heroContainer h1 {
+    max-width: 960px;
+    width: 100%;
+    font-family: Archivo Black;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 114.99999999999999%;
+    letter-spacing: -3px;
+    color: var(--white);
+    margin-top: 16px;
+}
+
+section.heroSection .heroContainer .paragrapContentPhone p {
+    color: #E9E9EA;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-top: 12px;
+    display: none;
+}
+
+section.heroSection .heroContainer .quoteBtn {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -4%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    margin-top: 32px;
+}
+
+section.heroSection .heroContainer .quoteBtn p {
+    padding: 0px 20px;
+    background: var(--light-green);
+    color: var(--white);
+    border-radius: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.heroSection .heroContainer .quoteBtn .quoteBtnArrow {
+    background: var(--light-green);
+    height: 100%;
+    border-radius: 50%;
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-4px);
+}
+
+section.heroSection .heroContainer .quoteBtn .quoteBtnArrow img {
+    max-width: 12px;
+    width: 100%;
+}
+
+section.heroSection .heroContainer .paragrapContent {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+section.heroSection .heroContainer .paragrapContent p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    text-align: right;
+    max-width: 542px;
+    width: 100%;
+    color: #4A4C56;
+}
+
+
+@media screen and (max-width: 1320px) {
+    section.heroSection .heroContainer .paragrapContent p {
+        max-width: 500px;
+        font-size: 16px;
+    }
+
+    section.heroSection .heroContainer .maskingArea {
+        padding: 390px 40px 47px 40px;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    section.heroSection .heroContainer h1 {
+        font-size: 54px;
+        max-width: 860px;
+    }
+
+    section.heroSection .heroContainer .paragrapContent p {
+        max-width: 450px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    section.heroSection .heroContainer h1 {
+        font-size: 44px;
+        max-width: 700px;
+    }
+
+    section.heroSection .heroContainer .paragrapContent p {
+        max-width: 380px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    section.heroSection {
+        margin-top: 0px;
+    }
+
+    section.heroSection .heroContainer .maskingArea {
+        background: url("/assets/hero-background-phone.png") no-repeat center center;
+        background-size: cover;
+        padding: 150px 12px 17px 12px;
+        -webkit-mask-image: url("/assets/hero-background-phone-mask.png");
+        mask-image: url("/assets/hero-background-phone-mask.png");
+    }
+
+    section.heroSection .heroContainer .review-hero {
+        padding: 4px 8px;
+    }
+
+    section.heroSection .heroContainer .review-hero img.google-icon {
+        max-width: 12px;
+    }
+
+    section.heroSection .heroContainer .review-hero h5 {
+        font-size: 12px;
+    }
+
+    section.heroSection .heroContainer .review-hero .stars img {
+        max-width: 12px;
+    }
+
+    section.heroSection .heroContainer h1 {
+        font-size: 28px;
+        letter-spacing: -0.8125px;
+    }
+
+    section.heroSection .heroContainer .paragrapContentPhone p {
+        display: block;
+    }
+
+    section.heroSection .heroContainer .paragrapContent p {
+        display: none;
+    }
+
+    section.heroSection .heroContainer .quoteBtn {
+        font-size: 14px;
+        height: 40px;
+        margin-top: 24px;
+    }
+
+    section.heroSection .heroContainer .quoteBtn p {
+        padding: 0px 16px;
+    }
+
+    section.heroSection .heroContainer .quoteBtn .quoteBtnArrow {
+        width: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================================================================================== */
+/* Service Areas Section */
+/* ===================================================================================================================== */
+section.areasSlider {
+    padding: 0px 20px;
+    margin-top: 64px;
+}
+
+section.areasSlider .areaSliderContainer {
+    max-width: 1393px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section.areasSlider .areaSliderContainer .heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+section.areasSlider .areaSliderContainer .heading li {
+    border: 1px solid #ECEFF3;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    padding: 12px 16px 12px 30px;
+    border-radius: 30px;
+    position: relative;
+    color: #4A4C56;
+}
+
+section.areasSlider .areaSliderContainer .heading li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    height: 8px;
+    width: 8px;
+    background: #4A4C56;
+    border-radius: 50%;
+}
+
+section.areasSlider .areaSliderContainer .heading .line {
+    width: 100%;
+    height: 1px;
+    background: #DFE1E7;
+    flex: 1;
+}
+
+section.areasSlider .areaSliderContainer .slider-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 32px;
+}
+
+section.areasSlider .areaSliderContainer .slider-container .items {
+    display: flex;
+    width: max-content;
+    gap: 130px;
+    will-change: transform;
+}
+
+section.areasSlider .areaSliderContainer .slider-container .item {
+    flex-shrink: 0;
+}
+
+section.areasSlider .areaSliderContainer .slider-container .item h1 {
+    white-space: nowrap;
+    font-family: Archivo Black;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    letter-spacing: 1px;
+    color: #4A4C56;
+}
+
+@media screen and (max-width: 1320px) {
+    section.areasSlider .areaSliderContainer .slider-container .items {
+        gap: 100px;
+    }
+
+    section.areasSlider .areaSliderContainer .slider-container .item h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    section.areasSlider .areaSliderContainer .slider-container .items {
+        gap: 60px;
+    }
+
+    section.areasSlider .areaSliderContainer .slider-container .item h1 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    section.areasSlider {
+        margin-top: 24px;
+    }
+
+    section.areasSlider .areaSliderContainer .heading li {
+        font-size: 14px;
+        padding: 9px 8px 9px 22px;
+    }
+
+    section.areasSlider .areaSliderContainer .heading li::after {
+        left: 12px;
+        height: 6px;
+        width: 6px;
+    }
+
+    section.areasSlider .areaSliderContainer .slider-container {
+        margin-top: 16px;
+    }
+
+    section.areasSlider .areaSliderContainer .slider-container .items {
+        gap: 16px;
+    }
+
+    section.areasSlider .areaSliderContainer .slider-container .item h1 {
+        font-size: 12px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================================================================================== */
+/* hero section */
+/* ===================================================================================================================== */
+section.service {
+    padding: 0px 20px;
+    margin-top: 120px;
+}
+
+section.service .serviceContainer {
+    max-width: 1393px;
+    width: 100%;
+    margin: 0 auto;
+    background: #F6F8FA;
+    border-radius: 32px;
+    min-height: 50vh;
+}

@@ -1,0 +1,33 @@
+/* font import */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/* global css */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+:root {
+    /* colors variables */
+    --white: #FFFFFF;
+    --off-white: #F6F8FA;
+    --green: #1F3D2B;
+    --light-green: #5E8C3A;
+    --black: #070707;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
