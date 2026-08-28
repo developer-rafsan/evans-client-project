@@ -387,7 +387,6 @@ section.areasSlider .areaSliderContainer .slider-container .item h1 {
     section.areasSlider .areaSliderContainer .slider-container .item h1 {
         font-size: 12px;
     }
-
 }
 
 
@@ -422,4 +421,681 @@ section.service .serviceContainer {
     background: #F6F8FA;
     border-radius: 32px;
     min-height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    padding: 48px;
 }
+
+section.service .serviceContainer .leftSite,
+section.service .serviceContainer .rightSite {
+    width: 50%;
+}
+
+section.service .serviceContainer .leftSite .heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+section.service .serviceContainer .leftSite .heading li {
+    border: 1px solid #ECEFF3;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    padding: 12px 16px 12px 30px;
+    border-radius: 30px;
+    position: relative;
+    color: #4A4C56;
+}
+
+section.service .serviceContainer .leftSite .heading li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    height: 8px;
+    width: 8px;
+    background: #4A4C56;
+    border-radius: 50%;
+}
+
+section.service .serviceContainer .leftSite .heading .line {
+    width: 100%;
+    height: 1px;
+    background: #DFE1E7;
+    flex: 1;
+}
+
+section.service .serviceContainer .leftSite>h1 {
+    font-family: Archivo Black;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 120%;
+    letter-spacing: -1px;
+    color: #1F3D2B;
+}
+
+section.service .serviceContainer .leftSite .phoneImageSection {
+    display: none;
+}
+
+section.service .serviceContainer .leftSite .serviceAccordance {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+section.service .serviceContainer .leftSite .serviceAccordance .item {
+    background: #FFFFFF;
+    padding: 24px;
+    border-radius: 24px;
+    box-shadow: 0px 4px 32px 0px #0000000F;
+}
+
+section.service .serviceContainer .leftSite .serviceAccordance .item .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+section.service .serviceContainer .leftSite .serviceAccordance .item .header img {
+    transition: transform 0.3s ease;
+}
+
+section.service .serviceContainer .leftSite .serviceAccordance .item.active .header img {
+    transform: rotate(45deg);
+}
+
+section.service .serviceContainer .leftSite .serviceAccordance .item .body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+section.service .serviceContainer .leftSite .serviceAccordance .item.active .body {
+    max-height: 300px;
+    opacity: 1;
+}
+
+section.service .serviceContainer .leftSite .serviceAccordance .item .header h4 {
+    font-family: Archivo Black;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: -1px;
+    color: #1F3D2B;
+}
+
+section.service .serviceContainer .leftSite .serviceAccordance .item .header img {
+    max-width: 32px;
+    width: 100%;
+}
+
+section.service .serviceContainer .leftSite .serviceAccordance .item .body p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: -1px;
+    color: #4A4C56;
+    margin-top: 20px;
+}
+
+section.service .serviceContainer .leftSite .serviceAccordance .item .body button {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -1%;
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 24px;
+}
+
+section.service .serviceContainer .leftSite .serviceAccordance .item .body button img {
+    max-width: 20px;
+    width: 100%;
+}
+
+section.service .serviceContainer .rightSite {
+    position: relative;
+}
+
+section.service .serviceContainer .rightSite .serviceImage {
+    width: 100%;
+    height: 100%;
+    background: url("/assets/service-image.jpg") no-repeat center center;
+    background-size: cover;
+
+    -webkit-mask-image: url("/assets/service-image-mask.jpg");
+    mask-image: url("/assets/service-image-mask.jpg");
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+
+section.service .serviceContainer .rightSite p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    text-align: right;
+    color: #4A4C56;
+    max-width: 279px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+
+@media screen and (max-width: 1320px) {
+    section.service .serviceContainer .leftSite>h1 {
+        font-size: 38px;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance {
+        margin-top: 38px;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance .item {
+        padding: 20px;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance .item .header h4 {
+        font-size: 22px;
+        line-height: 120%;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance .item .body p {
+        font-size: 16px;
+        margin-top: 16px;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance .item .body button {
+        font-size: 16px;
+        margin-top: 18px;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance .item .body button img {
+        max-width: 20px;
+        width: 100%;
+    }
+
+    section.service .serviceContainer .rightSite p {
+        font-size: 16px;
+        max-width: 220px;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    section.service .serviceContainer {
+        padding: 28px;
+    }
+
+    section.service .serviceContainer .leftSite>h1 {
+        font-size: 32px;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance {
+        margin-top: 28px;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance .item {
+        padding: 16px;
+        border-radius: 20px;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance .item .header h4 {
+        font-size: 18px;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance .item .body p {
+        font-size: 14px;
+        margin-top: 12px;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance .item .body button {
+        font-size: 14px;
+        margin-top: 12px;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance .item .body button img {
+        max-width: 16px;
+    }
+
+    section.service .serviceContainer .rightSite p {
+        font-size: 13px;
+        max-width: 180px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    section.service .serviceContainer .leftSite>h1 {
+        font-size: 28px;
+    }
+}
+
+
+@media screen and (max-width: 980px) {
+    section.service {
+        margin-top: 48px;
+    }
+
+    section.service .serviceContainer {
+        border-radius: 24px;
+        flex-direction: column;
+        gap: 24px;
+        padding: 12px;
+    }
+
+    section.service .serviceContainer .leftSite,
+    section.service .serviceContainer .rightSite {
+        width: 100%;
+    }
+
+    section.service .serviceContainer .rightSite {
+        display: none;
+    }
+
+    section.service .serviceContainer .leftSite .heading {
+        gap: 8px;
+    }
+
+    section.service .serviceContainer .leftSite .heading li {
+        font-size: 14px;
+        padding: 9px 8px 9px 22px;
+    }
+
+    section.service .serviceContainer .leftSite .heading li::after {
+        height: 6px;
+        width: 6px;
+    }
+
+    section.service .serviceContainer .leftSite>h1 {
+        font-size: 24px;
+    }
+
+    section.service .serviceContainer .leftSite .phoneImageSection {
+        display: block;
+        margin-top: 24px;
+        position: relative;
+    }
+
+    section.service .serviceContainer .leftSite .phoneImageSection .phoneServiceImage {
+        width: 100%;
+        height: 456px;
+        background: url("/assets/service-phone-image.jpg") no-repeat center center;
+        background-size: cover;
+
+        -webkit-mask-image: url("/assets/service-phone-image-mask.jpg");
+        mask-image: url("/assets/service-phone-image-mask.jpg");
+
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+
+        -webkit-mask-position: center;
+        mask-position: center;
+    }
+
+    section.service .serviceContainer .leftSite .phoneImageSection p {
+        position: absolute;
+        bottom: -10px;
+        right: 0;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: 0px;
+        text-align: right;
+        max-width: 180px;
+        width: 100%;
+        color: #4A4C56;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance {
+        margin-top: 24px;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance .item {
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance .item .header h4 {
+        font-size: 16px;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance .item .header img {
+        max-width: 20px;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance .item .body p {
+        font-size: 14px;
+        margin-top: 16px;
+    }
+
+    section.service .serviceContainer .leftSite .serviceAccordance .item .body button {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================================================================================== */
+/* Why Sentry Section */
+/* ===================================================================================================================== */
+section.why_sentry {
+    padding: 0px 20px;
+    margin-top: 160px;
+}
+
+section.why_sentry .why_sentryContainer {
+    max-width: 1296px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section.why_sentry .why_sentryContainer .heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+section.why_sentry .why_sentryContainer .heading li {
+    border: 1px solid #ECEFF3;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    padding: 12px 16px 12px 30px;
+    border-radius: 30px;
+    position: relative;
+    color: #4A4C56;
+}
+
+section.why_sentry .why_sentryContainer .heading li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    height: 8px;
+    width: 8px;
+    background: #4A4C56;
+    border-radius: 50%;
+}
+
+section.why_sentry .why_sentryContainer .heading .line {
+    width: 100%;
+    height: 1px;
+    background: #DFE1E7;
+    flex: 1;
+}
+
+section.why_sentry .why_sentryContainer .topPart {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 16px;
+}
+
+section.why_sentry .why_sentryContainer .topPart h1 {
+    font-family: Archivo Black;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: -1px;
+    color: #1F3D2B;
+    max-width: 662px;
+    width: 100%;
+}
+
+section.why_sentry .why_sentryContainer .topPart p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: #4A4C56;
+    max-width: 402px;
+    width: 100%;
+}
+
+section.why_sentry .why_sentryContainer .topPart .buttonGroup {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+section.why_sentry .why_sentryContainer .topPart .buttonGroup button {
+    all: unset;
+    cursor: pointer;
+}
+
+section.why_sentry .why_sentryContainer .topPart .buttonGroup img {
+    max-width: 40px;
+    width: 100%;
+}
+
+section.why_sentry .why_sentryContainer .sliderContainer {
+    margin-top: 48px;
+    overflow: hidden;
+}
+
+section.why_sentry .why_sentryContainer .sliderContainer .sliders {
+    display: flex;
+}
+
+section.why_sentry .why_sentryContainer .sliderContainer .sliders .slider {
+    position: relative;
+    min-width: 0;
+    width: 308.86px;
+}
+
+section.why_sentry .why_sentryContainer .sliderContainer .sliders .slider img {
+    max-width: 48px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    border: 1px solid #ECEFF3;
+    box-shadow: 0px 4px 32px 0px #0000000F;
+}
+
+section.why_sentry .why_sentryContainer .sliderContainer .sliders .slider .sliderCardShap {
+    position: relative;
+    width: 100%;
+    height: 271.609375px;
+
+    background: #f3f3f3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    -webkit-mask-image: url("/assets/slider-card-mask.png");
+    mask-image: url("/assets/slider-card-mask.png");
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+
+    -webkit-mask-position: center;
+    mask-position: center;
+
+    padding: 24px;
+}
+
+section.why_sentry .why_sentryContainer .sliderContainer .sliders .slider .sliderCardShap h1 {
+    font-family: Archivo Black;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: -1px;
+    color: #1F3D2B;
+    max-width: 196px;
+    width: 100%;
+}
+
+section.why_sentry .why_sentryContainer .sliderContainer .sliders .slider .sliderCardShap p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: -1px;
+    color: #4A4C56;
+}
+
+section.why_sentry .why_sentryContainer .sliderContainer .buttonGroup {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 1260px) {
+    section.why_sentry {
+        margin-top: 140px;
+    }
+
+    section.why_sentry .why_sentryContainer .topPart h1 {
+        font-size: 38px;
+        max-width: 452px;
+    }
+}
+
+
+
+@media screen and (max-width: 1060px) {
+    section.why_sentry {
+        margin-top: 100px;
+    }
+
+    section.why_sentry .why_sentryContainer .topPart h1 {
+        font-size: 28px;
+        max-width: 322px;
+    }
+
+    section.why_sentry .why_sentryContainer .topPart p {
+        font-size: 14px;
+        max-width: 302px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    section.why_sentry .why_sentryContainer .heading {
+        gap: 8px;
+    }
+
+    section.why_sentry .why_sentryContainer .heading li {
+        font-size: 14px;
+        padding: 9px 8px 9px 22px;
+    }
+
+    section.why_sentry .why_sentryContainer .heading li::after {
+        left: 12px;
+        height: 6px;
+        width: 6px;
+    }
+
+    section.why_sentry .why_sentryContainer .topPart {
+        flex-direction: column;
+        gap: 16px;
+        align-items: start;
+    }
+
+    section.why_sentry .why_sentryContainer .topPart h1 {
+        font-size: 24px;
+    }
+
+    section.why_sentry .why_sentryContainer .topPart p {
+        font-size: 14px;
+    }
+
+    section.why_sentry .why_sentryContainer .topPart .buttonGroup {
+        display: none;
+    }
+
+    section.why_sentry .why_sentryContainer .sliderContainer {
+        margin-top: 24px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    section.why_sentry .why_sentryContainer .sliderContainer .sliders .slider {
+        width: 308.86px;
+    }
+
+    section.why_sentry .why_sentryContainer .sliderContainer .buttonGroup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin-top: 24px;
+    }
+
+    section.why_sentry .why_sentryContainer .sliderContainer .buttonGroup button {
+        all: unset;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================================================================================== */
+/* Review Section */
+/* ===================================================================================================================== */

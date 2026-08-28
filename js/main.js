@@ -50,6 +50,55 @@ function animateSlider() {
     requestAnimationFrame(animateSlider);
 }
 
+
+// ============================================
+// Service Accordance
+// ============================================
+function serviceAccordance () {
+    const items = document.querySelectorAll(".serviceAccordance .item");
+
+    items[0].classList.add("active");
+
+    items.forEach((item) => {
+        const header = item.querySelector(".header");
+        header.addEventListener("click", () => {
+            const isActive = item.classList.contains("active");
+            items.forEach((i) => i.classList.remove("active"));
+            if (!isActive) {
+                item.classList.add("active");
+            }
+        });
+    });
+}
+
+
+// ============================================
+// Why Sentry Section Slider
+// ============================================
+function whySentrysliderAnimation() {
+
+    const sliderContainer = document.querySelector(".why_sentry .sliderContainer");
+
+    if (!sliderContainer || typeof Swiper === "undefined") {
+        return;
+    }
+
+    new Swiper(sliderContainer, {
+        loop: true,
+        speed: 700,
+        spaceBetween: 20,
+        grabCursor: true,
+
+        slidesPerView: "auto",
+
+        navigation: {
+            prevEl: ".whySentryPrev",
+            nextEl: ".whySentryNext",
+        },
+    });
+}
+
+
 // ===============================
 // all function all here
 // ===============================
@@ -59,3 +108,5 @@ document.querySelectorAll(".phoneSideMenu ul li a").forEach((link) => {
     link.addEventListener("click", closePhoneMenu);
 });
 animateSlider();
+serviceAccordance();
+whySentrysliderAnimation();
