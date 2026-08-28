@@ -16,15 +16,15 @@ section.heroSection .heroContainer {
 section.heroSection .heroContainer .maskingArea {
     width: 100%;
     height: 100%;
-    background: url("/assets/hero-background-pc.png") no-repeat center center;
+    background: url("../assets/hero-background-pc.png") no-repeat center center;
     background-size: cover;
     padding: 490px 40px 47px 40px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
-    -webkit-mask-image: url("/assets/hero-background-pc-mask.png");
-    mask-image: url("/assets/hero-background-pc-mask.png");
+    -webkit-mask-image: url("../assets/hero-background-pc-mask.png");
+    mask-image: url("../assets/hero-background-pc-mask.png");
 
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
@@ -200,11 +200,11 @@ section.heroSection .heroContainer .paragrapContent p {
     }
 
     section.heroSection .heroContainer .maskingArea {
-        background: url("/assets/hero-background-phone.png") no-repeat center center;
+        background: url("../assets/hero-background-phone.png") no-repeat center center;
         background-size: cover;
         padding: 150px 12px 17px 12px;
-        -webkit-mask-image: url("/assets/hero-background-phone-mask.png");
-        mask-image: url("/assets/hero-background-phone-mask.png");
+        -webkit-mask-image: url("../assets/hero-background-phone-mask.png");
+        mask-image: url("../assets/hero-background-phone-mask.png");
     }
 
     section.heroSection .heroContainer .review-hero {
@@ -576,11 +576,11 @@ section.service .serviceContainer .rightSite {
 section.service .serviceContainer .rightSite .serviceImage {
     width: 100%;
     height: 100%;
-    background: url("/assets/service-image.jpg") no-repeat center center;
+    background: url("../assets/service-image.jpg") no-repeat center center;
     background-size: cover;
 
-    -webkit-mask-image: url("/assets/service-image-mask.jpg");
-    mask-image: url("/assets/service-image-mask.jpg");
+    -webkit-mask-image: url("../assets/service-image-mask.jpg");
+    mask-image: url("../assets/service-image-mask.jpg");
 
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
@@ -747,11 +747,11 @@ section.service .serviceContainer .rightSite p {
     section.service .serviceContainer .leftSite .phoneImageSection .phoneServiceImage {
         width: 100%;
         height: 456px;
-        background: url("/assets/service-phone-image.jpg") no-repeat center center;
+        background: url("../assets/service-phone-image.jpg") no-repeat center center;
         background-size: cover;
 
-        -webkit-mask-image: url("/assets/service-phone-image-mask.jpg");
-        mask-image: url("/assets/service-phone-image-mask.jpg");
+        -webkit-mask-image: url("../assets/service-phone-image-mask.jpg");
+        mask-image: url("../assets/service-phone-image-mask.jpg");
 
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
@@ -957,8 +957,8 @@ section.why_sentry .why_sentryContainer .sliderContainer .sliders .slider .slide
     flex-direction: column;
     justify-content: space-between;
 
-    -webkit-mask-image: url("/assets/slider-card-mask.png");
-    mask-image: url("/assets/slider-card-mask.png");
+    -webkit-mask-image: url("../assets/slider-card-mask.png");
+    mask-image: url("../assets/slider-card-mask.png");
 
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
