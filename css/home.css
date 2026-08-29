@@ -1099,3 +1099,515 @@ section.why_sentry .why_sentryContainer .sliderContainer .buttonGroup {
 /* ===================================================================================================================== */
 /* Review Section */
 /* ===================================================================================================================== */
+
+section.review {
+    padding: 0px 20px;
+    margin-top: 160px;
+}
+
+section.review .reviewContainer {
+    max-width: 1392px;
+    width: 100%;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding: 40px 13px 40px 40px;
+    display: flex;
+    gap: 46px;
+    position: relative;
+    overflow: hidden;
+    background: var(--green);
+    border-radius: 32px;
+
+    -webkit-mask-image: url("../assets/review-section-mask.png");
+    mask-image: url("../assets/review-section-mask.png");
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+section.review .reviewContainer>.heading,
+section.review .reviewContainer>h1,
+section.review .reviewContainer>p {
+    display: none;
+}
+
+section.review .reviewContainer .reviewVisual {
+    max-width: 665.884765625px;
+    width: 100%;
+    position: relative;
+}
+
+section.review .reviewContainer .reviewVisual .featuredReview {
+    background: url("../assets/review-content-image.jpg");
+    background-size: cover;
+    height: 100%;
+    padding: 16px;
+    -webkit-mask-image: url("../assets/review-content-image-mask.jpg");
+    mask-image: url("../assets/review-content-image-mask.jpg");
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent {
+    margin-top: 495px;
+    padding: 16px;
+    border-radius: 24px;
+    max-width: 500px;
+    width: 100%;
+    background: var(--light-green);
+}
+
+section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent .reviewStars {
+    display: flex;
+    align-items: center;
+}
+
+section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent .reviewStars img {
+    width: 24px;
+    object-fit: contain;
+}
+
+section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent p {
+    margin-top: 12px;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -1px;
+    color: var(--white);
+}
+
+section.review .reviewContainer .reviewControls {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+section.review .reviewContainer .reviewControlsPhone {
+    display: none;
+}
+
+section.review .reviewContainer .reviewControls button {
+    all: unset;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+section.review .reviewContainer .reviewControls button img {
+    max-width: 40px;
+    width: 100%;
+}
+
+section.review .reviewContainer .reviewContent {
+    flex: 1;
+}
+
+section.review .reviewContainer .reviewContent .heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+section.review .reviewContainer .reviewContent .heading li {
+    border: 1px solid #486654;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    padding: 12px 16px 12px 30px;
+    border-radius: 30px;
+    position: relative;
+    color: #E9E9EA;
+}
+
+section.review .reviewContainer .reviewContent .heading li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    height: 8px;
+    width: 8px;
+    background: #E9E9EA;
+    border-radius: 50%;
+}
+
+section.review .reviewContainer .reviewContent .heading .line {
+    width: 100%;
+    height: 1px;
+    background: #486654;
+    flex: 1;
+}
+
+section.review .reviewContainer .reviewContent>h1 {
+    font-family: Archivo Black;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+    max-width: 598.9615478515625px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+section.review .reviewContainer .reviewContent>p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    margin-top: 16px;
+    color: #E9E9EA;
+}
+
+section.review .reviewContainer .reviewContent .reviewSlider {
+    width: 100%;
+    margin-top: 68px;
+    overflow: hidden;
+}
+
+section.review .reviewContainer .reviewContent .reviewCard {
+    max-width: 198px;
+    width: 100%;
+    border: 1px solid #33513F;
+    border-radius: 16px;
+    padding: 12px;
+}
+
+section.review .reviewContainer .reviewContent .reviewCard .reviewCardSource {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--white);
+    font-family: Archivo Black;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
+
+section.review .reviewContainer .reviewContent .reviewCard .reviewCardSource img {
+    max-width: 20px;
+    width: 100%;
+}
+
+section.review .reviewContainer .reviewContent .reviewCard>.reviewStars {
+    margin-top: 16px;
+    display: flex;
+}
+
+section.review .reviewContainer .reviewContent .reviewCard>.reviewStars img {
+    max-width: 16px;
+    width: 100%;
+}
+
+section.review .reviewContainer .reviewContent .reviewCard>p {
+    margin-top: 8px;
+    color: var(--white);
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: -1px;
+}
+
+section.review .reviewContainer .reviewContent .reviewCard .reviewAuthor {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+section.review .reviewAuthor strong {
+    font-family: Archivo Black;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: var(--white);
+}
+
+section.review .reviewAuthor span {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    margin-top: 8px;
+    color: #D2D2D5;
+}
+
+@media screen and (max-width: 1360px) {
+    section.review .reviewContainer .reviewContent>h1 {
+        font-size: 42px;
+    }
+
+    section.review .reviewContainer .reviewContent>p {
+        font-size: 16px;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview {
+        display: flex;
+        align-items: end;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent {
+        margin-top: 455px;
+        max-width: 450px;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    section.review {
+        margin-top: 80px;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent {
+        max-width: 75%;
+    }
+
+    section.review .reviewContainer .reviewControls {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    section.review .reviewContainer .reviewControls button img {
+        max-width: 34px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent {
+        margin-top: 400px;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent p {
+        font-size: 18px;
+    }
+
+    section.review .reviewContainer .reviewControls {
+        right: -10px;
+        bottom: 0px;
+    }
+
+    section.review .reviewContainer .reviewContent .reviewSlider {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    section.review {
+        margin-top: 60px;
+    }
+
+    section.review .reviewContainer .reviewVisual {
+        min-width: 450px;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent {
+        margin-top: 400px;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent p {
+        font-size: 16px;
+    }
+
+    section.review .reviewContainer .reviewContent>h1 {
+        font-size: 32px;
+    }
+
+    section.review .reviewContainer .reviewContent>p {
+        font-size: 14px;
+    }
+
+    section.review .reviewContainer .reviewContent {
+        max-width: 450px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent {
+        margin-top: 400px;
+    }
+
+    section.review .reviewContainer .reviewContent>h1 {
+        max-width: 350px;
+    }
+
+    section.review .reviewContainer .reviewContent>p {
+        max-width: 380px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    section.review {
+        margin-top: 63px;
+    }
+
+    section.review .reviewContainer {
+        -webkit-mask-image: url("../assets/review-section-phone-mask.png");
+        mask-image: url("../assets/review-section-phone-mask.png");
+        padding: 12px;
+        padding-bottom: 45px;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    section.review .reviewContainer>.heading {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-left: 14%;
+    }
+
+    section.review .reviewContainer>.heading li {
+        border: 1px solid #486654;
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 1%;
+        padding: 9px 8px 9px 22px;
+        border-radius: 30px;
+        position: relative;
+        color: #E9E9EA;
+    }
+
+    section.review .reviewContainer>.heading li::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        height: 6px;
+        width: 6px;
+        background: #E9E9EA;
+        border-radius: 50%;
+    }
+
+    section.review .reviewContainer>.heading .line {
+        width: 100%;
+        height: 1px;
+        background: #486654;
+        flex: 1;
+    }
+
+    section.review .reviewContainer>h1 {
+        font-family: Archivo Black;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 120%;
+        letter-spacing: -1px;
+        color: #FFFFFF;
+        max-width: 598.9615478515625px;
+        width: 100%;
+        margin-top: 16px;
+        display: block;
+    }
+
+    section.review .reviewContainer>p {
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0px;
+        margin-top: 16px;
+        color: #E9E9EA;
+        display: block;
+    }
+
+    section.review .reviewContainer .reviewVisual {
+        min-width: unset;
+        max-width: 100%;
+        margin-top: 24px;
+    }
+
+    section.review .reviewContainer .reviewContent {
+        max-width: 100%;
+        margin-top: 16px;
+    }
+
+    section.review .reviewContainer .reviewContent>h1,
+    section.review .reviewContainer .reviewContent .heading,
+    section.review .reviewContainer .reviewContent>p {
+        display: none;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent {
+        margin-top: 239px;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent .reviewStars img {
+        width: 16px;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent p {
+        margin-top: 12px;
+        font-size: 14px;
+    }
+
+    section.review .reviewContainer .reviewControls {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        display: none;
+    }
+
+    section.review .reviewContainer .reviewControlsPhone {
+        position: absolute;
+        right: 0px;
+        bottom: 6px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    section.review .reviewContainer .reviewControlsPhone button {
+        all: unset;
+    }
+
+    section.review .reviewContainer .reviewControlsPhone button img {
+        max-width: 20px;
+        width: 100%;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview {
+        height: 361.1387023925781px;
+        display: flex;
+        align-items: end;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent {
+        margin-top: unset;
+    }
+}

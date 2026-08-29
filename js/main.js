@@ -98,6 +98,31 @@ function whySentrysliderAnimation() {
     });
 }
 
+// ============================================
+// Reviews Section Slider
+// ============================================
+function reviewsSliderAnimation() {
+    const reviewSlider = document.querySelector(".reviewSlider");
+
+    if (!reviewSlider || typeof Swiper === "undefined") {
+        return;
+    }
+
+    new Swiper(reviewSlider, {
+        loop: true,
+        speed: 700,
+        spaceBetween: 16,
+        grabCursor: true,
+
+        slidesPerView: "auto",
+
+        navigation: {
+            prevEl: ".whySentryPrev",
+            nextEl: ".whySentryNext",
+        },
+    });
+}
+
 
 // ===============================
 // all function all here
@@ -110,3 +135,4 @@ document.querySelectorAll(".phoneSideMenu ul li a").forEach((link) => {
 animateSlider();
 serviceAccordance();
 whySentrysliderAnimation();
+reviewsSliderAnimation();
