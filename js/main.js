@@ -54,7 +54,7 @@ function animateSlider() {
 // ============================================
 // Service Accordance
 // ============================================
-function serviceAccordance () {
+function serviceAccordance() {
     const items = document.querySelectorAll(".serviceAccordance .item");
 
     items[0].classList.add("active");
