@@ -199,7 +199,7 @@ header .phoneSideMenu {
     }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1024px) {
 
     header .leftSite .headerMenu,
     header .rightSite .number,

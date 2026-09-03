@@ -255,6 +255,419 @@ section.heroSection .heroContainer .paragrapContent p {
 
 
 
+/* ===================================================================================================================== */
+/* FAQ Section */
+/* ===================================================================================================================== */
+section.faqSection {
+    padding: 80px 72px 160px;
+    background: var(--white);
+}
+
+section.faqSection .faqContainer {
+    max-width: 1392px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 573px) minmax(0, 610px);
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.faqSection .faqIntro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+section.faqSection .faqIntroContent {
+    width: 100%;
+}
+
+section.faqSection .faqEyebrow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+section.faqSection .faqEyebrow::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: url("../assets/icons/faq-line.svg") center / 100% 1px no-repeat;
+}
+
+section.faqSection .faqEyebrowPill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    flex: 0 0 auto;
+    height: 37px;
+    padding: 0 16px;
+    border: 1px solid #ECEFF3;
+    border-radius: 80px;
+    color: #4A4C56;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.18px;
+    white-space: nowrap;
+}
+
+section.faqSection .faqBullet {
+    line-height: 1;
+}
+
+section.faqSection .faqLabelMobile {
+    display: none;
+}
+
+section.faqSection .faqIntro h2 {
+    max-width: 573px;
+    color: #1F3D2B;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+section.faqSection .faqDescription {
+    max-width: 433px;
+    margin-top: 16px;
+    color: #4A4C56;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+section.faqSection .faqContact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 66px;
+    color: #1F3D2B;
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+section.faqSection .faqContact p {
+    opacity: 0.5;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+section.faqSection .faqContact a {
+    font-weight: 600;
+}
+
+section.faqSection .faqContactButton {
+    display: inline-flex;
+    align-items: center;
+    height: 44px;
+    color: var(--white);
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.64px;
+    margin-top: 24px;
+}
+
+section.faqSection .faqContactButton>span:first-child,
+section.faqSection .faqContactArrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    background: #5E8C3A;
+}
+
+section.faqSection .faqContactButton>span:first-child {
+    padding: 0 20px;
+    border-radius: 40px;
+}
+
+section.faqSection .faqContactArrow {
+    width: 44px;
+    margin-left: -2px;
+    border-radius: 50%;
+}
+
+section.faqSection .faqContactArrow img {
+    width: 12px;
+    height: 12px;
+}
+
+section.faqSection .faqList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section.faqSection .faqItem {
+    border-top: 1px solid #F4F4F4;
+}
+
+section.faqSection .faqItem:first-child {
+    border-top: 0;
+    padding-top: 20px;
+}
+
+section.faqSection .faqQuestion {
+    width: 100%;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    padding: 19px 0 0;
+    border: 0;
+    background: transparent;
+    color: #777980;
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.48px;
+    text-align: left;
+    cursor: pointer;
+}
+
+section.faqSection .faqItem:first-child .faqQuestion {
+    min-height: 72px;
+    padding-top: 0;
+    line-height: 36px;
+}
+
+section.faqSection .faqItem.is-open .faqQuestion {
+    color: var(--black);
+}
+
+section.faqSection .faqItem:not(:first-child) .faqQuestion {
+    min-height: 43px;
+}
+
+section.faqSection .faqQuestion>span:first-child {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 527px;
+}
+
+section.faqSection .faqIcon {
+    position: relative;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+}
+
+section.faqSection .faqIcon img {
+    position: absolute;
+    width: 17.5px;
+    height: 17.5px;
+    left: 3.25px;
+    top: 3.25px;
+    transition: opacity 220ms ease;
+}
+
+section.faqSection .faqMinusIcon {
+    top: 11.25px;
+    height: 1.5px !important;
+    opacity: 0;
+}
+
+section.faqSection .faqItem.is-open .faqMinusIcon {
+    opacity: 1;
+}
+
+section.faqSection .faqItem.is-open .faqPlusIcon {
+    opacity: 0;
+}
+
+section.faqSection .faqAnswer {
+    max-width: 534px;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    opacity: 0;
+    color: #4A4C56;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    transition: max-height 360ms ease, opacity 220ms ease, padding 360ms ease;
+}
+
+section.faqSection .faqItem.is-open .faqAnswer {
+    padding-top: 16px;
+    opacity: 1;
+}
+
+section.faqSection .faqAnswer[hidden] {
+    display: none;
+}
+
+@media screen and (max-width: 1160px) {
+    section.faqSection .faqContainer {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        column-gap: 40px;
+    }
+
+    section.faqSection .faqIntro h2 {
+        font-size: 40px;
+    }
+
+    section.faqSection .faqQuestion {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    section.faqSection {
+        padding: 64px 20px 96px;
+    }
+
+    section.faqSection .faqContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    section.faqSection .faqIntro {
+        gap: 0;
+    }
+
+    section.faqSection .faqEyebrow {
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    section.faqSection .faqEyebrowPill {
+        height: 29px;
+        padding: 0 8px;
+        font-size: 14px;
+        letter-spacing: 0.14px;
+    }
+
+    section.faqSection .faqEyebrowPill .faqBullet {
+        font-size: 18px;
+    }
+
+    section.faqSection .faqLabelDesktop {
+        display: none;
+    }
+
+    section.faqSection .faqLabelMobile {
+        display: inline;
+        line-height: 13px;
+    }
+
+    section.faqSection .faqIntro h2 {
+        font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+    }
+
+    section.faqSection .faqDescription {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    section.faqSection .faqContact {
+        margin-top: 16px;
+        gap: 12px;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    section.faqSection .faqContact a {
+        line-height: 1;
+    }
+
+    section.faqSection .faqContactButton {
+        height: 40px;
+        margin-top: 24px;
+        font-size: 14px;
+        letter-spacing: -0.56px;
+    }
+
+    section.faqSection .faqContactButton>span:first-child,
+    section.faqSection .faqContactArrow {
+        height: 40px;
+    }
+
+    section.faqSection .faqContactButton>span:first-child {
+        padding: 0 16px;
+    }
+
+    section.faqSection .faqContactArrow {
+        width: 40px;
+    }
+
+    section.faqSection .faqQuestion {
+        min-height: 39px;
+        padding: 15px 0 0;
+        align-items: flex-start;
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: -0.4px;
+    }
+
+    section.faqSection .faqItem:first-child {
+        padding-top: 16px;
+    }
+
+    section.faqSection .faqItem:first-child .faqQuestion {
+        min-height: 60px;
+        padding: 0;
+        line-height: 30px;
+    }
+
+    section.faqSection .faqQuestion>span:first-child {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    section.faqSection .faqList {
+        gap: 16px;
+    }
+
+    section.faqSection .faqIcon img {
+        width: 17.5px;
+        height: 17.5px;
+        left: 3.25px;
+        top: 3.25px;
+    }
+
+    section.faqSection .faqIcon .faqMinusIcon {
+        top: 11.25px;
+        height: 1.5px;
+    }
+
+    section.faqSection .faqAnswer {
+        max-width: 353px;
+        padding: 0 24px 0 0;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    section.faqSection .faqItem.is-open .faqAnswer {
+        padding-top: 8px;
+    }
+}
+
+
+
+
+
 
 
 
@@ -407,7 +820,7 @@ section.areasSlider .areaSliderContainer .slider-container .item h1 {
 
 
 /* ===================================================================================================================== */
-/* hero section */
+/* service section */
 /* ===================================================================================================================== */
 section.service {
     padding: 0px 20px;
@@ -430,6 +843,7 @@ section.service .serviceContainer {
 section.service .serviceContainer .leftSite,
 section.service .serviceContainer .rightSite {
     width: 50%;
+    min-width: 0;
 }
 
 section.service .serviceContainer .leftSite .heading {
@@ -816,13 +1230,6 @@ section.service .serviceContainer .rightSite p {
 
 
 
-
-
-
-
-
-
-
 /* ===================================================================================================================== */
 /* Why Sentry Section */
 /* ===================================================================================================================== */
@@ -891,6 +1298,7 @@ section.why_sentry .why_sentryContainer .topPart h1 {
     color: #1F3D2B;
     max-width: 662px;
     width: 100%;
+    min-width: 0;
 }
 
 section.why_sentry .why_sentryContainer .topPart p {
@@ -902,6 +1310,7 @@ section.why_sentry .why_sentryContainer .topPart p {
     color: #4A4C56;
     max-width: 402px;
     width: 100%;
+    min-width: 0;
 }
 
 section.why_sentry .why_sentryContainer .topPart .buttonGroup {
@@ -1358,298 +1767,6 @@ section.review .reviewAuthor span {
 
 
 
-/* ===================================================================================================================== */
-/* Service Areas Map Section */
-/* ===================================================================================================================== */
-section.serviceAreas {
-    padding: 0px 46px;
-    margin-top: 120px;
-}
-
-section.serviceAreas .serviceAreasContainer {
-    max-width: 1392px;
-    width: 100%;
-    min-height: 392px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
-    gap: 28px;
-}
-
-section.serviceAreas .leftSite,
-section.serviceAreas .rightSite {
-    min-width: 0;
-}
-
-section.serviceAreas .leftSite .heading {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-section.serviceAreas .leftSite .heading li {
-    border: 1px solid #ECEFF3;
-    font-family: Inter;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 100%;
-    letter-spacing: 1%;
-    padding: 12px 16px 12px 30px;
-    border-radius: 30px;
-    position: relative;
-    color: #4A4C56;
-    background: var(--white);
-}
-
-section.serviceAreas .leftSite .heading li::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    height: 8px;
-    width: 8px;
-    background: #4A4C56;
-    border-radius: 50%;
-}
-
-section.serviceAreas .leftSite .heading .line {
-    width: 100%;
-    height: 1px;
-    background: #DFE1E7;
-    flex: 1;
-}
-
-section.serviceAreas .leftSite h2 {
-    max-width: 490px;
-    margin-top: 20px;
-    font-family: Archivo Black;
-    font-weight: 400;
-    font-size: clamp(30px, 3vw, 42px);
-    line-height: 115%;
-    letter-spacing: -1px;
-    color: var(--green);
-}
-
-section.serviceAreas .leftSite > p {
-    max-width: 480px;
-    margin-top: 18px;
-    font-family: Inter;
-    font-size: 14px;
-    line-height: 150%;
-    color: #4A4C56;
-}
-
-section.serviceAreas .serviceAreaList {
-    max-width: 430px;
-    margin-top: 28px;
-    padding: 8px 6px;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    background: var(--white);
-    border-radius: 10px;
-    box-shadow: 0px 5px 24px #0000000D;
-}
-
-section.serviceAreas .serviceAreaList li {
-    min-height: 40px;
-    padding: 6px 6px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border: 0;
-    border-radius: 7px;
-    background: var(--white);
-    color: #8A9991;
-    cursor: pointer;
-    font-family: Inter;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 120%;
-    transition: color 0.2s ease, background-color 0.2s ease;
-}
-
-section.serviceAreas .serviceAreaList li:hover,
-section.serviceAreas .serviceAreaList li:focus-visible,
-section.serviceAreas .serviceAreaList li.active {
-    background: #F2F4F5;
-    color: var(--green);
-    outline: none;
-}
-
-section.serviceAreas .locationPinIcon {
-    flex: 0 0 28px;
-    width: 28px;
-    height: 28px;
-    border-radius: 7px;
-    background-color: #91A098;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M12 2.5a6.5 6.5 0 0 0-6.5 6.5c0 4.7 6.5 12.5 6.5 12.5S18.5 13.7 18.5 9A6.5 6.5 0 0 0 12 2.5Zm0 9.2A2.7 2.7 0 1 1 12 6a2.7 2.7 0 0 1 0 5.7Z'/%3E%3C/svg%3E");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 18px;
-    transition: background-color 0.2s ease;
-}
-
-section.serviceAreas .serviceAreaList li.active .locationPinIcon,
-section.serviceAreas .serviceAreaList li:hover .locationPinIcon,
-section.serviceAreas .serviceAreaList li:focus-visible .locationPinIcon {
-    background-color: var(--green);
-}
-
-section.serviceAreas .rightSite {
-    min-height: 392px;
-    position: relative;
-}
-
-section.serviceAreas .serviceAreasMap {
-    width: 100%;
-    height: 100%;
-    min-height: 392px;
-    overflow: hidden;
-    border: 0;
-    border-radius: 6px;
-    box-shadow: none;
-    background: #DDE8D9;
-}
-
-section.serviceAreas #serviceAreasMap {
-    display: block;
-    width: 100%;
-    height: 100%;
-    min-height: 392px;
-    border: 0;
-}
-
-section.serviceAreas .serviceAreaPinWrapper {
-    background: transparent;
-    border: 0;
-}
-
-section.serviceAreas .serviceAreaPin {
-    display: block;
-    width: 24px;
-    height: 24px;
-    border: 3px solid var(--white);
-    border-radius: 50% 50% 50% 0;
-    background: var(--green);
-    box-shadow: 0px 3px 10px #00000045;
-    transform: rotate(-45deg);
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-section.serviceAreas .serviceAreaPin::after {
-    content: "";
-    display: block;
-    width: 6px;
-    height: 6px;
-    margin: 6px auto;
-    border-radius: 50%;
-    background: var(--white);
-}
-
-section.serviceAreas .serviceAreaPin.active {
-    background: var(--light-green);
-    transform: rotate(-45deg) scale(1.2);
-}
-
-section.serviceAreas .mapSelection {
-    display: none;
-}
-
-section.serviceAreas .leaflet-control-zoom {
-    display: none;
-}
-
-@media screen and (max-width: 1160px) {
-    section.serviceAreas {
-        margin-top: 90px;
-    }
-
-    section.serviceAreas .serviceAreasContainer {
-        gap: 24px;
-    }
-
-    section.serviceAreas .leftSite h2 {
-        font-size: 30px;
-    }
-}
-
-@media screen and (max-width: 760px) {
-    section.serviceAreas {
-        margin-top: 64px;
-        padding: 0px 20px;
-    }
-
-    section.serviceAreas .serviceAreasContainer {
-        min-height: 0;
-        padding: 12px;
-        grid-template-columns: 1fr;
-        gap: 28px;
-        border-radius: 24px;
-    }
-
-    section.serviceAreas .leftSite .heading {
-        gap: 8px;
-    }
-
-    section.serviceAreas .leftSite .heading li {
-        font-size: 14px;
-        padding: 9px 8px 9px 22px;
-    }
-
-    section.serviceAreas .leftSite .heading li::after {
-        left: 12px;
-        height: 6px;
-        width: 6px;
-    }
-
-    section.serviceAreas .leftSite h2 {
-        margin-top: 16px;
-        font-size: 26px;
-    }
-
-    section.serviceAreas .leftSite > p {
-        margin-top: 12px;
-        font-size: 14px;
-    }
-
-    section.serviceAreas .serviceAreaList {
-        margin-top: 20px;
-    }
-
-    section.serviceAreas .serviceAreaList li {
-        padding: 14px 12px;
-        font-size: 14px;
-    }
-
-    section.serviceAreas .rightSite,
-    section.serviceAreas .serviceAreasMap {
-        min-height: 360px;
-    }
-
-    section.serviceAreas #serviceAreasMap {
-        min-height: 344px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    section.serviceAreas .rightSite,
-    section.serviceAreas .serviceAreasMap {
-        min-height: 300px;
-    }
-
-    section.serviceAreas #serviceAreasMap {
-        min-height: 284px;
-    }
-
-    section.serviceAreas .mapSelection {
-        right: 12px;
-        bottom: 12px;
-        font-size: 12px;
-    }
-}
-
 @media screen and (max-width: 1360px) {
     section.review .reviewContainer .reviewContent>h1 {
         font-size: 42px;
@@ -1904,5 +2021,550 @@ section.serviceAreas .leaflet-control-zoom {
 
     section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent {
         margin-top: unset;
+    }
+}
+
+
+
+
+/* ===================================================================================================================== */
+/* Service Areas Map Section */
+/* ===================================================================================================================== */
+section.serviceAreas {
+    padding: 0px 20px 80px;
+    margin-top: 120px;
+}
+
+section.serviceAreas .serviceAreasContainer {
+    max-width: 1392px;
+    width: 100%;
+    min-height: 392px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+    gap: 28px;
+}
+
+section.serviceAreas .leftSite,
+section.serviceAreas .rightSite {
+    min-width: 0;
+}
+
+section.serviceAreas .leftSite .heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+section.serviceAreas .leftSite .heading li {
+    border: 1px solid #ECEFF3;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    padding: 12px 16px 12px 30px;
+    border-radius: 30px;
+    position: relative;
+    color: #4A4C56;
+    background: var(--white);
+}
+
+section.serviceAreas .leftSite .heading li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    height: 8px;
+    width: 8px;
+    background: #4A4C56;
+    border-radius: 50%;
+}
+
+section.serviceAreas .leftSite .heading .line {
+    width: 100%;
+    height: 1px;
+    background: #DFE1E7;
+    flex: 1;
+}
+
+section.serviceAreas .leftSite h2 {
+    max-width: 490px;
+    margin-top: 20px;
+    font-family: Archivo Black;
+    font-weight: 400;
+    font-size: clamp(30px, 3vw, 42px);
+    line-height: 115%;
+    letter-spacing: -1px;
+    color: var(--green);
+}
+
+section.serviceAreas .leftSite>p {
+    max-width: 480px;
+    margin-top: 18px;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 150%;
+    color: #4A4C56;
+}
+
+section.serviceAreas .serviceAreaList {
+    max-width: 430px;
+    margin-top: 28px;
+    padding: 8px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 5px 24px #0000000D;
+}
+
+section.serviceAreas .serviceAreaList li {
+    min-height: 40px;
+    padding: 6px 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+    border-radius: 7px;
+    background: var(--white);
+    color: #8A9991;
+    cursor: pointer;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 120%;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+section.serviceAreas .serviceAreaList li:hover,
+section.serviceAreas .serviceAreaList li:focus-visible,
+section.serviceAreas .serviceAreaList li.active {
+    background: #F2F4F5;
+    color: var(--green);
+    outline: none;
+}
+
+section.serviceAreas .locationPinIcon {
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    background-color: #91A098;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M12 2.5a6.5 6.5 0 0 0-6.5 6.5c0 4.7 6.5 12.5 6.5 12.5S18.5 13.7 18.5 9A6.5 6.5 0 0 0 12 2.5Zm0 9.2A2.7 2.7 0 1 1 12 6a2.7 2.7 0 0 1 0 5.7Z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    transition: background-color 0.2s ease;
+}
+
+section.serviceAreas .serviceAreaList li.active .locationPinIcon,
+section.serviceAreas .serviceAreaList li:hover .locationPinIcon,
+section.serviceAreas .serviceAreaList li:focus-visible .locationPinIcon {
+    background-color: var(--green);
+}
+
+section.serviceAreas .rightSite {
+    min-height: 392px;
+    position: relative;
+}
+
+section.serviceAreas .serviceAreasMap {
+    width: 100%;
+    height: 100%;
+    min-height: 392px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: none;
+    background: #DDE8D9;
+}
+
+section.serviceAreas #serviceAreasMap {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 392px;
+    border: 0;
+}
+
+section.serviceAreas .serviceAreaPinWrapper {
+    background: transparent;
+    border: 0;
+}
+
+section.serviceAreas .serviceAreaPin {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid var(--white);
+    border-radius: 50% 50% 50% 0;
+    background: var(--green);
+    box-shadow: 0px 3px 10px #00000045;
+    transform: rotate(-45deg);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+section.serviceAreas .serviceAreaPin::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    margin: 6px auto;
+    border-radius: 50%;
+    background: var(--white);
+}
+
+section.serviceAreas .serviceAreaPin.active {
+    background: var(--light-green);
+    transform: rotate(-45deg) scale(1.2);
+}
+
+section.serviceAreas .mapSelection {
+    display: none;
+}
+
+section.serviceAreas .leaflet-control-zoom {
+    display: none;
+}
+
+@media screen and (max-width: 1160px) {
+    section.serviceAreas {
+        margin-top: 90px;
+    }
+
+    section.serviceAreas .serviceAreasContainer {
+        gap: 24px;
+    }
+
+    section.serviceAreas .leftSite h2 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    section.serviceAreas {
+        margin-top: 64px;
+        padding: 0px 20px;
+    }
+
+    section.serviceAreas .serviceAreasContainer {
+        min-height: 0;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        border-radius: 24px;
+    }
+
+    section.serviceAreas .leftSite .heading {
+        gap: 8px;
+    }
+
+    section.serviceAreas .leftSite .heading li {
+        font-size: 14px;
+        padding: 9px 8px 9px 22px;
+    }
+
+    section.serviceAreas .leftSite .heading li::after {
+        left: 12px;
+        height: 6px;
+        width: 6px;
+    }
+
+    section.serviceAreas .leftSite h2 {
+        margin-top: 16px;
+        font-size: 26px;
+    }
+
+    section.serviceAreas .leftSite>p {
+        margin-top: 12px;
+        font-size: 14px;
+    }
+
+    section.serviceAreas .serviceAreaList {
+        margin-top: 20px;
+    }
+
+    section.serviceAreas .serviceAreaList li {
+        padding: 14px 12px;
+        font-size: 14px;
+    }
+
+    section.serviceAreas .rightSite,
+    section.serviceAreas .serviceAreasMap {
+        min-height: 360px;
+    }
+
+    section.serviceAreas #serviceAreasMap {
+        min-height: 344px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    section.serviceAreas .rightSite,
+    section.serviceAreas .serviceAreasMap {
+        min-height: 300px;
+    }
+
+    section.serviceAreas #serviceAreasMap {
+        min-height: 284px;
+    }
+
+    section.serviceAreas .mapSelection {
+        right: 12px;
+        bottom: 12px;
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================================================================================== */
+/* Call to Action Section */
+/* ===================================================================================================================== */
+section.callToAction {
+    padding: 0px 20px;
+}
+
+section.callToAction .callToActionContainer {
+    max-width: 1392px;
+    width: 100%;
+    min-height: 50vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    padding: 320px 48px 53px 48px;
+    background: url("../assets/call-to-action-background.png") no-repeat center center;
+    background-size: cover;
+    border-radius: 32px;
+
+    -webkit-mask-image: url("../assets/call-to-action-mask.png");
+    mask-image: url("../assets/call-to-action-mask.png");
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+
+    -webkit-mask-position: start;
+    mask-position: start;
+}
+
+section.callToAction .callToActionContainer .shapContainer {
+    max-width: 713px;
+    width: 100%;
+    min-height: 317px;
+    padding: 33px 23px 27px 33px;
+    background: var(--white);
+
+    -webkit-mask-image: url("../assets/call-to-action-shap-mask.png");
+    mask-image: url("../assets/call-to-action-shap-mask.png");
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+section.callToAction .callToActionContainer .shapContainer h3 {
+    color: #1F3D2B;
+    font-family: "Archivo Black";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -1px;
+}
+
+section.callToAction .callToActionContainer .shapContainer h3:nth-child(1) {
+    padding-left: 270px;
+}
+
+section.callToAction .callToActionContainer .shapContainer .shapContainerParagraph {
+    color: #4A4C56;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    display: flex;
+    justify-content: end;
+    margin-top: -30px;
+}
+
+section.callToAction .callToActionContainer .shapContainer .shapContainerParagraph p {
+    max-width: 325px;
+    width: 100%;
+}
+
+section.callToAction .callContactButton {
+    display: inline-flex;
+    align-items: center;
+    height: 44px;
+    margin-top: 32px;
+    color: var(--white);
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.64px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+section.callToAction .callContactButton:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+section.callToAction .callContactButton:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 4px;
+}
+
+section.callToAction .callContactButton > span:first-child,
+section.callToAction .callContactArrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    background: var(--light-green);
+}
+
+section.callToAction .callContactButton > span:first-child {
+    padding: 0 20px;
+    border-radius: 40px;
+}
+
+section.callToAction .callContactArrow {
+    width: 44px;
+    margin-left: -4px;
+    border-radius: 50%;
+}
+
+section.callToAction .callContactArrow img {
+    width: 12px;
+    height: 12px;
+}
+
+@media screen and (max-width: 760px) {
+    section.callToAction {
+        padding: 0 12px;
+    }
+
+    section.callToAction .callToActionContainer {
+        min-height: 0;
+        padding: 180px 12px 24px;
+        border-radius: 24px;
+        background-position: left center;
+    }
+
+    section.callToAction .callToActionContainer .shapContainer {
+        max-width: none;
+        min-height: 0;
+        padding: 28px 20px 24px;
+    }
+
+    section.callToAction .callToActionContainer .shapContainer h3 {
+        font-size: 28px;
+        line-height: 120%;
+        letter-spacing: -0.6px;
+    }
+
+    section.callToAction .callToActionContainer .shapContainer h3:nth-child(1) {
+        padding-left: 0;
+    }
+
+    section.callToAction .callToActionContainer .shapContainer .shapContainerParagraph {
+        justify-content: flex-start;
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    section.callToAction .callToActionContainer .shapContainer .shapContainerParagraph p {
+        max-width: 100%;
+    }
+
+    section.callToAction .callContactButton {
+        height: 40px;
+        margin-top: 24px;
+        font-size: 14px;
+        letter-spacing: -0.56px;
+    }
+
+    section.callToAction .callContactButton > span:first-child,
+    section.callToAction .callContactArrow {
+        height: 40px;
+    }
+
+    section.callToAction .callContactButton > span:first-child {
+        padding: 0 16px;
+    }
+
+    section.callToAction .callContactArrow {
+        width: 40px;
+    }
+}
+
+@media screen and (min-width: 761px) and (max-width: 1160px) {
+    section.callToAction .callToActionContainer {
+        padding: 240px 32px 40px;
+        border-radius: 28px;
+        background-position: left center;
+    }
+
+    section.callToAction .callToActionContainer .shapContainer {
+        max-width: 680px;
+        min-height: 300px;
+        padding: 30px 24px 24px 32px;
+    }
+
+    section.callToAction .callToActionContainer .shapContainer h3 {
+        font-size: 40px;
+    }
+
+    section.callToAction .callToActionContainer .shapContainer h3:nth-child(1) {
+        padding-left: clamp(120px, 22vw, 270px);
+    }
+
+    section.callToAction .callToActionContainer .shapContainer .shapContainerParagraph {
+        margin-top: -24px;
+        font-size: 16px;
+    }
+
+    section.callToAction .callToActionContainer .shapContainer .shapContainerParagraph p {
+        max-width: min(325px, 48%);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    section.callToAction .callToActionContainer {
+        padding-top: 150px;
+    }
+
+    section.callToAction .callToActionContainer .shapContainer {
+        padding: 24px 16px 20px;
+    }
+
+    section.callToAction .callToActionContainer .shapContainer h3 {
+        font-size: 25px;
     }
 }

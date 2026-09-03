@@ -71,6 +71,107 @@ function serviceAccordance() {
     });
 }
 
+// ============================================
+// FAQ Accordance
+// ============================================
+function faqAccordance() {
+    const faqList = document.querySelector("[data-faq-list]");
+
+    if (!faqList) {
+        return;
+    }
+
+    const items = [...faqList.querySelectorAll(".faqItem")];
+
+    function setItemState(item, shouldOpen, animate = true) {
+        const answer = item.querySelector(".faqAnswer");
+
+        if (!answer) {
+            return;
+        }
+
+        if (shouldOpen) {
+            answer.hidden = false;
+            item.classList.add("is-open");
+            answer.style.maxHeight = "0px";
+
+            const openAnswer = () => {
+                answer.style.maxHeight = `${answer.scrollHeight}px`;
+            };
+
+            if (animate) {
+                requestAnimationFrame(openAnswer);
+            } else {
+                openAnswer();
+            }
+
+            return;
+        }
+
+        if (answer.hidden) {
+            item.classList.remove("is-open");
+            answer.style.maxHeight = "0px";
+            return;
+        }
+
+        answer.hidden = false;
+        answer.style.maxHeight = `${answer.scrollHeight}px`;
+        item.classList.remove("is-open");
+
+        const hideAnswer = (event) => {
+            if (event.propertyName === "max-height" && !item.classList.contains("is-open")) {
+                answer.hidden = true;
+                answer.removeEventListener("transitionend", hideAnswer);
+            }
+        };
+
+        answer.addEventListener("transitionend", hideAnswer);
+
+        if (animate) {
+            requestAnimationFrame(() => {
+                answer.style.maxHeight = "0px";
+            });
+        } else {
+            answer.style.maxHeight = "0px";
+            answer.hidden = true;
+        }
+    }
+
+    items.forEach((item) => {
+        const button = item.querySelector(".faqQuestion");
+        const isInitiallyOpen = item.classList.contains("is-open");
+
+        if (!button) {
+            return;
+        }
+
+        button.setAttribute("aria-expanded", String(isInitiallyOpen));
+        setItemState(item, isInitiallyOpen, false);
+
+        button.addEventListener("click", () => {
+            const shouldOpen = button.getAttribute("aria-expanded") !== "true";
+
+            items.forEach((currentItem) => {
+                const currentButton = currentItem.querySelector(".faqQuestion");
+                const isCurrent = currentItem === item;
+
+                currentButton.setAttribute("aria-expanded", String(isCurrent && shouldOpen));
+                setItemState(currentItem, isCurrent && shouldOpen);
+            });
+        });
+    });
+
+    window.addEventListener("resize", () => {
+        items.forEach((item) => {
+            const answer = item.querySelector(".faqAnswer");
+
+            if (item.classList.contains("is-open") && answer) {
+                answer.style.maxHeight = `${answer.scrollHeight}px`;
+            }
+        });
+    });
+}
+
 
 // ============================================
 // Why Sentry Section Slider
@@ -98,6 +199,8 @@ function whySentrysliderAnimation() {
     });
 }
 
+
+
 // ============================================
 // Reviews Section Slider
 // ============================================
@@ -122,6 +225,8 @@ function reviewsSliderAnimation() {
         },
     });
 }
+
+
 
 // ============================================
 // Service Areas Map
@@ -241,6 +346,7 @@ document.querySelectorAll(".phoneSideMenu ul li a").forEach((link) => {
 });
 animateSlider();
 serviceAccordance();
+faqAccordance();
 whySentrysliderAnimation();
 reviewsSliderAnimation();
 serviceAreasMap();
