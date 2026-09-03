@@ -1355,6 +1355,301 @@ section.review .reviewAuthor span {
     color: #D2D2D5;
 }
 
+
+
+
+/* ===================================================================================================================== */
+/* Service Areas Map Section */
+/* ===================================================================================================================== */
+section.serviceAreas {
+    padding: 0px 46px;
+    margin-top: 120px;
+}
+
+section.serviceAreas .serviceAreasContainer {
+    max-width: 1392px;
+    width: 100%;
+    min-height: 392px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+    gap: 28px;
+}
+
+section.serviceAreas .leftSite,
+section.serviceAreas .rightSite {
+    min-width: 0;
+}
+
+section.serviceAreas .leftSite .heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+section.serviceAreas .leftSite .heading li {
+    border: 1px solid #ECEFF3;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    padding: 12px 16px 12px 30px;
+    border-radius: 30px;
+    position: relative;
+    color: #4A4C56;
+    background: var(--white);
+}
+
+section.serviceAreas .leftSite .heading li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    height: 8px;
+    width: 8px;
+    background: #4A4C56;
+    border-radius: 50%;
+}
+
+section.serviceAreas .leftSite .heading .line {
+    width: 100%;
+    height: 1px;
+    background: #DFE1E7;
+    flex: 1;
+}
+
+section.serviceAreas .leftSite h2 {
+    max-width: 490px;
+    margin-top: 20px;
+    font-family: Archivo Black;
+    font-weight: 400;
+    font-size: clamp(30px, 3vw, 42px);
+    line-height: 115%;
+    letter-spacing: -1px;
+    color: var(--green);
+}
+
+section.serviceAreas .leftSite > p {
+    max-width: 480px;
+    margin-top: 18px;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 150%;
+    color: #4A4C56;
+}
+
+section.serviceAreas .serviceAreaList {
+    max-width: 430px;
+    margin-top: 28px;
+    padding: 8px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 5px 24px #0000000D;
+}
+
+section.serviceAreas .serviceAreaList li {
+    min-height: 40px;
+    padding: 6px 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+    border-radius: 7px;
+    background: var(--white);
+    color: #8A9991;
+    cursor: pointer;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 120%;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+section.serviceAreas .serviceAreaList li:hover,
+section.serviceAreas .serviceAreaList li:focus-visible,
+section.serviceAreas .serviceAreaList li.active {
+    background: #F2F4F5;
+    color: var(--green);
+    outline: none;
+}
+
+section.serviceAreas .locationPinIcon {
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    background-color: #91A098;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M12 2.5a6.5 6.5 0 0 0-6.5 6.5c0 4.7 6.5 12.5 6.5 12.5S18.5 13.7 18.5 9A6.5 6.5 0 0 0 12 2.5Zm0 9.2A2.7 2.7 0 1 1 12 6a2.7 2.7 0 0 1 0 5.7Z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    transition: background-color 0.2s ease;
+}
+
+section.serviceAreas .serviceAreaList li.active .locationPinIcon,
+section.serviceAreas .serviceAreaList li:hover .locationPinIcon,
+section.serviceAreas .serviceAreaList li:focus-visible .locationPinIcon {
+    background-color: var(--green);
+}
+
+section.serviceAreas .rightSite {
+    min-height: 392px;
+    position: relative;
+}
+
+section.serviceAreas .serviceAreasMap {
+    width: 100%;
+    height: 100%;
+    min-height: 392px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: none;
+    background: #DDE8D9;
+}
+
+section.serviceAreas #serviceAreasMap {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 392px;
+    border: 0;
+}
+
+section.serviceAreas .serviceAreaPinWrapper {
+    background: transparent;
+    border: 0;
+}
+
+section.serviceAreas .serviceAreaPin {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid var(--white);
+    border-radius: 50% 50% 50% 0;
+    background: var(--green);
+    box-shadow: 0px 3px 10px #00000045;
+    transform: rotate(-45deg);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+section.serviceAreas .serviceAreaPin::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    margin: 6px auto;
+    border-radius: 50%;
+    background: var(--white);
+}
+
+section.serviceAreas .serviceAreaPin.active {
+    background: var(--light-green);
+    transform: rotate(-45deg) scale(1.2);
+}
+
+section.serviceAreas .mapSelection {
+    display: none;
+}
+
+section.serviceAreas .leaflet-control-zoom {
+    display: none;
+}
+
+@media screen and (max-width: 1160px) {
+    section.serviceAreas {
+        margin-top: 90px;
+    }
+
+    section.serviceAreas .serviceAreasContainer {
+        gap: 24px;
+    }
+
+    section.serviceAreas .leftSite h2 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    section.serviceAreas {
+        margin-top: 64px;
+        padding: 0px 20px;
+    }
+
+    section.serviceAreas .serviceAreasContainer {
+        min-height: 0;
+        padding: 12px;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        border-radius: 24px;
+    }
+
+    section.serviceAreas .leftSite .heading {
+        gap: 8px;
+    }
+
+    section.serviceAreas .leftSite .heading li {
+        font-size: 14px;
+        padding: 9px 8px 9px 22px;
+    }
+
+    section.serviceAreas .leftSite .heading li::after {
+        left: 12px;
+        height: 6px;
+        width: 6px;
+    }
+
+    section.serviceAreas .leftSite h2 {
+        margin-top: 16px;
+        font-size: 26px;
+    }
+
+    section.serviceAreas .leftSite > p {
+        margin-top: 12px;
+        font-size: 14px;
+    }
+
+    section.serviceAreas .serviceAreaList {
+        margin-top: 20px;
+    }
+
+    section.serviceAreas .serviceAreaList li {
+        padding: 14px 12px;
+        font-size: 14px;
+    }
+
+    section.serviceAreas .rightSite,
+    section.serviceAreas .serviceAreasMap {
+        min-height: 360px;
+    }
+
+    section.serviceAreas #serviceAreasMap {
+        min-height: 344px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section.serviceAreas .rightSite,
+    section.serviceAreas .serviceAreasMap {
+        min-height: 300px;
+    }
+
+    section.serviceAreas #serviceAreasMap {
+        min-height: 284px;
+    }
+
+    section.serviceAreas .mapSelection {
+        right: 12px;
+        bottom: 12px;
+        font-size: 12px;
+    }
+}
+
 @media screen and (max-width: 1360px) {
     section.review .reviewContainer .reviewContent>h1 {
         font-size: 42px;

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 
 <body>
@@ -492,8 +493,57 @@
 
 
 
+
+
+
+    <!-- ************************ -->
+    <!-- Service Areas -->
+    <!-- ************************ -->
+    <section class="serviceAreas" id="service-areas">
+        <div class="serviceAreasContainer">
+            <div class="leftSite">
+                <ul class="heading">
+                    <li>Service Areas</li>
+                    <div class="line"></div>
+                </ul>
+                <h2>Do we provide landscaping services in your area?</h2>
+                <p>Sentry Landscaping serves select communities across Sullivan and Orange Counties, New York, including the towns below.</p>
+                <ul class="serviceAreaList" aria-label="Service area locations">
+                    <li data-location="Bloomingburg, NY" role="button" tabindex="0" aria-pressed="false"><span class="locationPinIcon" aria-hidden="true"></span>Bloomingburg, NY</li>
+                    <li data-location="Wurtsboro, NY" role="button" tabindex="0" aria-pressed="false"><span class="locationPinIcon" aria-hidden="true"></span>Wurtsboro, NY</li>
+                    <li data-location="Fair Oaks, NY" role="button" tabindex="0" aria-pressed="false"><span class="locationPinIcon" aria-hidden="true"></span>Fair Oaks, NY</li>
+                    <li data-location="Rock Hill, NY" role="button" tabindex="0" aria-pressed="false"><span class="locationPinIcon" aria-hidden="true"></span>Rock Hill, NY</li>
+                </ul>
+            </div>
+            <div class="rightSite">
+                <div class="serviceAreasMap">
+                    <div id="serviceAreasMap" role="application" aria-label="Sentry Landscaping service areas map"></div>
+                </div>
+                <p class="mapSelection" id="mapSelection" aria-live="polite">Select a location to view it on the map.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- ************************ -->
+    <!-- What You Need to Know -->
+    <!-- ************************ -->
+
+
+
+
+
+
+
+
     <!-- include js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/main.js"></script>
 </body>
 
