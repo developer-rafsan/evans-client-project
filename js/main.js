@@ -71,10 +71,14 @@ function serviceAccordance() {
         const header = item.querySelector(".header");
         header.addEventListener("click", () => {
             const isActive = item.classList.contains("active");
-            items.forEach((i) => i.classList.remove("active"));
-            if (!isActive) {
-                item.classList.add("active");
+
+            // Keep one service item open at all times.
+            if (isActive) {
+                return;
             }
+
+            items.forEach((i) => i.classList.remove("active"));
+            item.classList.add("active");
         });
     });
 }
@@ -185,25 +189,33 @@ function faqAccordance() {
 // Why Sentry Section Slider
 // ============================================
 function whySentrysliderAnimation() {
-
-    const sliderContainer = document.querySelector(".why_sentry .sliderContainer");
-
-    if (!sliderContainer || typeof Swiper === "undefined") {
+    if (typeof Swiper === "undefined") {
         return;
     }
 
-    new Swiper(sliderContainer, {
-        loop: true,
-        speed: 700,
-        spaceBetween: 20,
-        grabCursor: true,
+    document.querySelectorAll(".why_sentry").forEach((section) => {
+        const sliderContainer = section.querySelector(".sliderContainer");
 
-        slidesPerView: "auto",
+        if (!sliderContainer) {
+            return;
+        }
 
-        navigation: {
-            prevEl: ".whySentryPrev",
-            nextEl: ".whySentryNext",
-        },
+        const swiper = new Swiper(sliderContainer, {
+            loop: true,
+            speed: 700,
+            spaceBetween: 20,
+            grabCursor: true,
+            slidesPerView: "auto",
+        });
+
+        // Bind every Why Sentry control inside this section to this slider.
+        section.querySelectorAll(".whySentryPrev").forEach((button) => {
+            button.addEventListener("click", () => swiper.slidePrev());
+        });
+
+        section.querySelectorAll(".whySentryNext").forEach((button) => {
+            button.addEventListener("click", () => swiper.slideNext());
+        });
     });
 }
 
@@ -212,25 +224,61 @@ function whySentrysliderAnimation() {
 // ============================================
 // Reviews Section Slider
 // ============================================
-function reviewsSliderAnimation() {
-    const reviewSlider = document.querySelector(".reviewSlider");
-
-    if (!reviewSlider || typeof Swiper === "undefined") {
+function syncFeaturedReview(reviewSection, slide) {
+    if (!reviewSection || !slide) {
         return;
     }
 
-    new Swiper(reviewSlider, {
-        loop: true,
-        speed: 700,
-        spaceBetween: 16,
-        grabCursor: true,
+    const featuredContent = reviewSection.querySelector(".featuredReviewContent");
+    const featuredStars = featuredContent?.querySelector(".reviewStars");
+    const featuredQuote = featuredContent?.querySelector("p");
+    const reviewStars = slide.querySelector(".reviewStars");
+    const reviewQuote = slide.querySelector(".reviewCard > p");
 
-        slidesPerView: "auto",
+    if (featuredStars && reviewStars) {
+        featuredStars.replaceChildren(
+            ...[...reviewStars.querySelectorAll("img")].map((star) => star.cloneNode(true))
+        );
+    }
 
-        navigation: {
-            prevEl: ".whySentryPrev",
-            nextEl: ".whySentryNext",
-        },
+    if (featuredQuote && reviewQuote) {
+        featuredQuote.textContent = reviewQuote.textContent;
+    }
+}
+
+function reviewsSliderAnimation() {
+    if (typeof Swiper === "undefined") {
+        return;
+    }
+
+    document.querySelectorAll(".reviewSlider").forEach((reviewSlider) => {
+        const reviewSection = reviewSlider.closest(".review");
+        const swiper = new Swiper(reviewSlider, {
+            loop: true,
+            speed: 700,
+            spaceBetween: 16,
+            grabCursor: true,
+            slidesPerView: "auto",
+        });
+
+        if (!reviewSection) {
+            return;
+        }
+
+        const syncActiveReview = () => {
+            syncFeaturedReview(reviewSection, swiper.slides[swiper.activeIndex]);
+        };
+
+        swiper.on("slideChange", syncActiveReview);
+        syncActiveReview();
+
+        reviewSection.querySelectorAll(".whySentryPrev").forEach((button) => {
+            button.addEventListener("click", () => swiper.slidePrev());
+        });
+
+        reviewSection.querySelectorAll(".whySentryNext").forEach((button) => {
+            button.addEventListener("click", () => swiper.slideNext());
+        });
     });
 }
 
