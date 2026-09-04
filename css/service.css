@@ -1,57 +1,1034 @@
 /* ===================================================================================================================== */
-/* Service Page */
+/* Service Areas Section */
 /* ===================================================================================================================== */
-body.servicePage {
-    background: var(--white);
+section.areasSlider {
+    padding: 0px 20px;
+    margin-top: 64px;
 }
 
-section.serviceHero {
-    padding: 80px 20px 0;
+section.areasSlider .areaSliderContainer {
+    max-width: 1393px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.servicePageContainer,
-.serviceHeroIntro,
-.serviceHeroVisual {
+section.areasSlider .areaSliderContainer .heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+section.areasSlider .areaSliderContainer .heading li {
+    border: 1px solid #ECEFF3;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    padding: 12px 16px 12px 30px;
+    border-radius: 30px;
+    position: relative;
+    color: #4A4C56;
+}
+
+section.areasSlider .areaSliderContainer .heading li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    height: 8px;
+    width: 8px;
+    background: #4A4C56;
+    border-radius: 50%;
+}
+
+section.areasSlider .areaSliderContainer .heading .line {
+    width: 100%;
+    height: 1px;
+    background: #DFE1E7;
+    flex: 1;
+}
+
+section.areasSlider .areaSliderContainer .slider-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 32px;
+}
+
+section.areasSlider .areaSliderContainer .slider-container .items {
+    display: flex;
+    width: max-content;
+    gap: 130px;
+    will-change: transform;
+}
+
+section.areasSlider .areaSliderContainer .slider-container .item {
+    flex-shrink: 0;
+}
+
+section.areasSlider .areaSliderContainer .slider-container .item h1 {
+    white-space: nowrap;
+    font-family: Archivo Black;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    letter-spacing: 1px;
+    color: #4A4C56;
+}
+
+@media screen and (max-width: 1320px) {
+    section.areasSlider .areaSliderContainer .slider-container .items {
+        gap: 100px;
+    }
+
+    section.areasSlider .areaSliderContainer .slider-container .item h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    section.areasSlider .areaSliderContainer .slider-container .items {
+        gap: 60px;
+    }
+
+    section.areasSlider .areaSliderContainer .slider-container .item h1 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    section.areasSlider {
+        margin-top: 24px;
+    }
+
+    section.areasSlider .areaSliderContainer .heading li {
+        font-size: 14px;
+        padding: 9px 8px 9px 22px;
+    }
+
+    section.areasSlider .areaSliderContainer .heading li::after {
+        left: 12px;
+        height: 6px;
+        width: 6px;
+    }
+
+    section.areasSlider .areaSliderContainer .slider-container {
+        margin-top: 16px;
+    }
+
+    section.areasSlider .areaSliderContainer .slider-container .items {
+        gap: 16px;
+    }
+
+    section.areasSlider .areaSliderContainer .slider-container .item h1 {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================================================================================== */
+/* Why Sentry Section */
+/* ===================================================================================================================== */
+section.why_sentry {
+    padding: 0px 20px;
+    margin-top: 160px;
+}
+
+section.why_sentry .why_sentryContainer {
     max-width: 1296px;
     width: 100%;
     margin: 0 auto;
 }
 
-.serviceHeroIntro {
+section.why_sentry .why_sentryContainer .heading {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+section.why_sentry .why_sentryContainer .heading li {
+    border: 1px solid #ECEFF3;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    padding: 12px 16px 12px 30px;
+    border-radius: 30px;
+    position: relative;
+    color: #4A4C56;
+}
+
+section.why_sentry .why_sentryContainer .heading li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    height: 8px;
+    width: 8px;
+    background: #4A4C56;
+    border-radius: 50%;
+}
+
+section.why_sentry .why_sentryContainer .heading .line {
+    width: 100%;
+    height: 1px;
+    background: #DFE1E7;
+    flex: 1;
+}
+
+section.why_sentry .why_sentryContainer .topPart {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 16px;
+}
+
+section.why_sentry .why_sentryContainer .topPart h1 {
+    font-family: Archivo Black;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: -1px;
+    color: #1F3D2B;
+    max-width: 662px;
+    width: 100%;
+    min-width: 0;
+}
+
+section.why_sentry .why_sentryContainer .topPart p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: #4A4C56;
+    max-width: 402px;
+    width: 100%;
+    min-width: 0;
+}
+
+section.why_sentry .why_sentryContainer .topPart .buttonGroup {
+    display: flex;
+    gap: 16px;
     align-items: center;
 }
 
-.serviceHeroHeading,
-.sectionEyebrow {
+section.why_sentry .why_sentryContainer .topPart .buttonGroup button {
+    all: unset;
+    cursor: pointer;
+}
+
+section.why_sentry .why_sentryContainer .topPart .buttonGroup img {
+    max-width: 40px;
+    width: 100%;
+}
+
+section.why_sentry .why_sentryContainer .sliderContainer {
+    margin-top: 48px;
+    overflow: hidden;
+}
+
+section.why_sentry .why_sentryContainer .sliderContainer .sliders {
+    display: flex;
+}
+
+section.why_sentry .why_sentryContainer .sliderContainer .sliders .slider {
+    position: relative;
+    min-width: 0;
+    width: 308.86px;
+}
+
+section.why_sentry .why_sentryContainer .sliderContainer .sliders .slider img {
+    max-width: 48px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    border: 1px solid #ECEFF3;
+    box-shadow: 0px 4px 32px 0px #0000000F;
+}
+
+section.why_sentry .why_sentryContainer .sliderContainer .sliders .slider .sliderCardShap {
+    position: relative;
+    width: 100%;
+    height: 271.609375px;
+
+    background: #f3f3f3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    -webkit-mask-image: url("../assets/slider-card-mask.png");
+    mask-image: url("../assets/slider-card-mask.png");
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+
+    -webkit-mask-position: center;
+    mask-position: center;
+
+    padding: 24px;
+}
+
+section.why_sentry .why_sentryContainer .sliderContainer .sliders .slider .sliderCardShap h1 {
+    font-family: Archivo Black;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: -1px;
+    color: #1F3D2B;
+    max-width: 196px;
+    width: 100%;
+}
+
+section.why_sentry .why_sentryContainer .sliderContainer .sliders .slider .sliderCardShap p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: -1px;
+    color: #4A4C56;
+}
+
+section.why_sentry .why_sentryContainer .sliderContainer .buttonGroup {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 1260px) {
+    section.why_sentry {
+        margin-top: 140px;
+    }
+
+    section.why_sentry .why_sentryContainer .topPart h1 {
+        font-size: 38px;
+        max-width: 452px;
+    }
+}
+
+
+
+@media screen and (max-width: 1060px) {
+    section.why_sentry {
+        margin-top: 100px;
+    }
+
+    section.why_sentry .why_sentryContainer .topPart h1 {
+        font-size: 28px;
+        max-width: 322px;
+    }
+
+    section.why_sentry .why_sentryContainer .topPart p {
+        font-size: 14px;
+        max-width: 302px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    section.why_sentry .why_sentryContainer .heading {
+        gap: 8px;
+    }
+
+    section.why_sentry .why_sentryContainer .heading li {
+        font-size: 14px;
+        padding: 9px 8px 9px 22px;
+    }
+
+    section.why_sentry .why_sentryContainer .heading li::after {
+        left: 12px;
+        height: 6px;
+        width: 6px;
+    }
+
+    section.why_sentry .why_sentryContainer .topPart {
+        flex-direction: column;
+        gap: 16px;
+        align-items: start;
+    }
+
+    section.why_sentry .why_sentryContainer .topPart h1 {
+        font-size: 24px;
+    }
+
+    section.why_sentry .why_sentryContainer .topPart p {
+        font-size: 14px;
+    }
+
+    section.why_sentry .why_sentryContainer .topPart .buttonGroup {
+        display: none;
+    }
+
+    section.why_sentry .why_sentryContainer .sliderContainer {
+        margin-top: 24px;
+    }
+
+    section.why_sentry .why_sentryContainer .sliderContainer .buttonGroup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin-top: 24px;
+    }
+
+    section.why_sentry .why_sentryContainer .sliderContainer .buttonGroup button {
+        all: unset;
+        cursor: pointer;
+    }
+
+    section.why_sentry .why_sentryContainer .sliderContainer .buttonGroup img {
+        display: block;
+        max-width: 40px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    section.why_sentry .why_sentryContainer .sliderContainer .sliders .slider {
+        width: 308.86px;
+    }
+
+    section.why_sentry .why_sentryContainer .sliderContainer .buttonGroup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin-top: 24px;
+    }
+
+    section.why_sentry .why_sentryContainer .sliderContainer .buttonGroup button {
+        all: unset;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================================================================================== */
+/* Review Section */
+/* ===================================================================================================================== */
+
+section.review {
+    padding: 0px 20px;
+    margin-top: 160px;
+}
+
+section.review .reviewContainer {
+    max-width: 1392px;
+    width: 100%;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding: 40px 13px 40px 40px;
+    display: flex;
+    gap: 46px;
+    position: relative;
+    overflow: hidden;
+    background: var(--green);
+    border-radius: 32px;
+
+    -webkit-mask-image: url("../assets/review-section-mask.png");
+    mask-image: url("../assets/review-section-mask.png");
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+section.review .reviewContainer>.heading,
+section.review .reviewContainer>h1,
+section.review .reviewContainer>p {
+    display: none;
+}
+
+section.review .reviewContainer .reviewVisual {
+    max-width: 665.884765625px;
+    width: 100%;
+    position: relative;
+}
+
+section.review .reviewContainer .reviewVisual .featuredReview {
+    background: url("../assets/review-content-image.jpg");
+    background-size: cover;
+    height: 100%;
+    padding: 16px;
+    -webkit-mask-image: url("../assets/review-content-image-mask.jpg");
+    mask-image: url("../assets/review-content-image-mask.jpg");
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent {
+    margin-top: 495px;
+    padding: 16px;
+    border-radius: 24px;
+    max-width: 500px;
+    width: 100%;
+    background: var(--light-green);
+}
+
+section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent .reviewStars {
+    display: flex;
+    align-items: center;
+}
+
+section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent .reviewStars img {
+    width: 24px;
+    object-fit: contain;
+}
+
+section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent p {
+    margin-top: 12px;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -1px;
+    color: var(--white);
+}
+
+section.review .reviewContainer .reviewControls {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+section.review .reviewContainer .reviewControlsPhone {
+    display: none;
+}
+
+section.review .reviewContainer .reviewControls button {
+    all: unset;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+section.review .reviewContainer .reviewControls button img {
+    max-width: 40px;
+    width: 100%;
+}
+
+section.review .reviewContainer .reviewContent {
+    flex: 1;
+}
+
+section.review .reviewContainer .reviewContent .heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+section.review .reviewContainer .reviewContent .heading li {
+    border: 1px solid #486654;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    padding: 12px 16px 12px 30px;
+    border-radius: 30px;
+    position: relative;
+    color: #E9E9EA;
+}
+
+section.review .reviewContainer .reviewContent .heading li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    height: 8px;
+    width: 8px;
+    background: #E9E9EA;
+    border-radius: 50%;
+}
+
+section.review .reviewContainer .reviewContent .heading .line {
+    width: 100%;
+    height: 1px;
+    background: #486654;
+    flex: 1;
+}
+
+section.review .reviewContainer .reviewContent>h1 {
+    font-family: Archivo Black;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+    max-width: 598.9615478515625px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+section.review .reviewContainer .reviewContent>p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    margin-top: 16px;
+    color: #E9E9EA;
+}
+
+section.review .reviewContainer .reviewContent .reviewSlider {
+    width: 100%;
+    margin-top: 68px;
+    overflow: hidden;
+}
+
+section.review .reviewContainer .reviewContent .reviewCard {
+    max-width: 198px;
+    width: 100%;
+    border: 1px solid #33513F;
+    border-radius: 16px;
+    padding: 12px;
+}
+
+section.review .reviewContainer .reviewContent .reviewCard .reviewCardSource {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--white);
+    font-family: Archivo Black;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
+
+section.review .reviewContainer .reviewContent .reviewCard .reviewCardSource img {
+    max-width: 20px;
+    width: 100%;
+}
+
+section.review .reviewContainer .reviewContent .reviewCard>.reviewStars {
+    margin-top: 16px;
+    display: flex;
+}
+
+section.review .reviewContainer .reviewContent .reviewCard>.reviewStars img {
+    max-width: 16px;
+    width: 100%;
+}
+
+section.review .reviewContainer .reviewContent .reviewCard>p {
+    margin-top: 8px;
+    color: var(--white);
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: -1px;
+}
+
+section.review .reviewContainer .reviewContent .reviewCard .reviewAuthor {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+section.review .reviewAuthor strong {
+    font-family: Archivo Black;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: var(--white);
+}
+
+section.review .reviewAuthor span {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    margin-top: 8px;
+    color: #D2D2D5;
+}
+
+
+
+
+@media screen and (max-width: 1360px) {
+    section.review .reviewContainer .reviewContent>h1 {
+        font-size: 42px;
+    }
+
+    section.review .reviewContainer .reviewContent>p {
+        font-size: 16px;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview {
+        display: flex;
+        align-items: end;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent {
+        margin-top: 455px;
+        max-width: 450px;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    section.review {
+        margin-top: 80px;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent {
+        max-width: 75%;
+    }
+
+    section.review .reviewContainer .reviewControls {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    section.review .reviewContainer .reviewControls button img {
+        max-width: 34px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent {
+        margin-top: 400px;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent p {
+        font-size: 18px;
+    }
+
+    section.review .reviewContainer .reviewControls {
+        right: -10px;
+        bottom: 0px;
+    }
+
+    section.review .reviewContainer .reviewContent .reviewSlider {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    section.review {
+        margin-top: 60px;
+    }
+
+    section.review .reviewContainer .reviewVisual {
+        min-width: 450px;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent {
+        margin-top: 400px;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent p {
+        font-size: 16px;
+    }
+
+    section.review .reviewContainer .reviewContent>h1 {
+        font-size: 32px;
+    }
+
+    section.review .reviewContainer .reviewContent>p {
+        font-size: 14px;
+    }
+
+    section.review .reviewContainer .reviewContent {
+        max-width: 450px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent {
+        margin-top: 400px;
+    }
+
+    section.review .reviewContainer .reviewContent>h1 {
+        max-width: 350px;
+    }
+
+    section.review .reviewContainer .reviewContent>p {
+        max-width: 380px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    section.review {
+        margin-top: 63px;
+    }
+
+    section.review .reviewContainer {
+        -webkit-mask-image: url("../assets/review-section-phone-mask.png");
+        mask-image: url("../assets/review-section-phone-mask.png");
+        padding: 12px;
+        padding-bottom: 45px;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    section.review .reviewContainer>.heading {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-left: 14%;
+    }
+
+    section.review .reviewContainer>.heading li {
+        border: 1px solid #486654;
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 1%;
+        padding: 9px 8px 9px 22px;
+        border-radius: 30px;
+        position: relative;
+        color: #E9E9EA;
+    }
+
+    section.review .reviewContainer>.heading li::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        height: 6px;
+        width: 6px;
+        background: #E9E9EA;
+        border-radius: 50%;
+    }
+
+    section.review .reviewContainer>.heading .line {
+        width: 100%;
+        height: 1px;
+        background: #486654;
+        flex: 1;
+    }
+
+    section.review .reviewContainer>h1 {
+        font-family: Archivo Black;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 120%;
+        letter-spacing: -1px;
+        color: #FFFFFF;
+        max-width: 598.9615478515625px;
+        width: 100%;
+        margin-top: 16px;
+        display: block;
+    }
+
+    section.review .reviewContainer>p {
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0px;
+        margin-top: 16px;
+        color: #E9E9EA;
+        display: block;
+    }
+
+    section.review .reviewContainer .reviewVisual {
+        min-width: unset;
+        max-width: 100%;
+        margin-top: 24px;
+    }
+
+    section.review .reviewContainer .reviewContent {
+        max-width: 100%;
+        margin-top: 16px;
+    }
+
+    section.review .reviewContainer .reviewContent>h1,
+    section.review .reviewContainer .reviewContent .heading,
+    section.review .reviewContainer .reviewContent>p {
+        display: none;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent {
+        margin-top: 239px;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent .reviewStars img {
+        width: 16px;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent p {
+        margin-top: 12px;
+        font-size: 14px;
+    }
+
+    section.review .reviewContainer .reviewControls {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        display: none;
+    }
+
+    section.review .reviewContainer .reviewControlsPhone {
+        position: absolute;
+        right: 0px;
+        bottom: 6px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    section.review .reviewContainer .reviewControlsPhone button {
+        all: unset;
+    }
+
+    section.review .reviewContainer .reviewControlsPhone button img {
+        max-width: 20px;
+        width: 100%;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview {
+        height: 361.1387023925781px;
+        display: flex;
+        align-items: end;
+    }
+
+    section.review .reviewContainer .reviewVisual .featuredReview .featuredReviewContent {
+        margin-top: unset;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================================================================================== */
+/* FAQ Section */
+/* ===================================================================================================================== */
+section.faqSection {
+    padding: 80px 20px 160px;
+    background: var(--white);
+}
+
+section.faqSection .faqContainer {
+    max-width: 1392px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 573px) minmax(0, 610px);
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.faqSection .faqIntro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+section.faqSection .faqIntroContent {
+    width: 100%;
+}
+
+section.faqSection .faqEyebrow {
     display: flex;
     align-items: center;
     gap: 16px;
     width: 100%;
+    margin-bottom: 16px;
 }
 
-.serviceHeroHeading::before {
+section.faqSection .faqEyebrow::after {
     content: "";
     height: 1px;
     flex: 1;
-    background: #DFE1E7;
+    background: url("../assets/icons/faq-line.svg") center / 100% 1px no-repeat;
 }
 
-.serviceHeroHeading .line,
-.sectionEyebrow .line {
-    height: 1px;
-    flex: 1;
-    background: #DFE1E7;
-}
-
-.serviceHeroHeading li,
-.sectionEyebrow li {
+section.faqSection .faqEyebrowPill {
     display: inline-flex;
     align-items: center;
     gap: 4px;
     flex: 0 0 auto;
-    padding: 12px 16px;
+    height: 37px;
+    padding: 0 16px;
     border: 1px solid #ECEFF3;
     border-radius: 80px;
     color: #4A4C56;
@@ -63,36 +1040,56 @@ section.serviceHero {
     white-space: nowrap;
 }
 
-.serviceHeroIntro > h1 {
-    max-width: 748px;
-    margin-top: 16px;
-    color: var(--green);
+section.faqSection .faqBullet {
+    line-height: 1;
+}
+
+section.faqSection .faqLabelMobile {
+    display: none;
+}
+
+section.faqSection .faqIntro h2 {
+    max-width: 573px;
+    color: #1F3D2B;
     font-family: "Archivo Black", sans-serif;
     font-size: 48px;
     font-weight: 400;
     line-height: 1.2;
     letter-spacing: -1px;
-    text-align: center;
 }
 
-.serviceHeroIntro > p {
-    max-width: 674px;
+section.faqSection .faqDescription {
+    max-width: 433px;
     margin-top: 16px;
     color: #4A4C56;
     font-family: Inter, sans-serif;
     font-size: 18px;
+    font-weight: 400;
     line-height: 1.5;
-    text-align: center;
 }
 
-.serviceHeroActions {
+section.faqSection .faqContact {
     display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-top: 24px;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 66px;
+    color: #1F3D2B;
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
 }
 
-.servicePageButton {
+section.faqSection .faqContact p {
+    opacity: 0.5;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+section.faqSection .faqContact a {
+    font-weight: 600;
+}
+
+section.faqSection .faqContactButton {
     display: inline-flex;
     align-items: center;
     height: 44px;
@@ -102,10 +1099,451 @@ section.serviceHero {
     font-weight: 500;
     line-height: 1;
     letter-spacing: -0.64px;
+    margin-top: 24px;
 }
 
-.servicePageButton > span:first-child,
-.servicePageButtonArrow {
+section.faqSection .faqContactButton>span:first-child,
+section.faqSection .faqContactArrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    background: #5E8C3A;
+}
+
+section.faqSection .faqContactButton>span:first-child {
+    padding: 0 20px;
+    border-radius: 40px;
+}
+
+section.faqSection .faqContactArrow {
+    width: 44px;
+    margin-left: -2px;
+    border-radius: 50%;
+}
+
+section.faqSection .faqContactArrow img {
+    width: 12px;
+    height: 12px;
+}
+
+section.faqSection .faqList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section.faqSection .faqItem {
+    border-top: 1px solid #F4F4F4;
+}
+
+section.faqSection .faqItem:first-child {
+    border-top: 0;
+    padding-top: 20px;
+}
+
+section.faqSection .faqQuestion {
+    width: 100%;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    padding: 19px 0 0;
+    border: 0;
+    background: transparent;
+    color: #777980;
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.48px;
+    text-align: left;
+    cursor: pointer;
+}
+
+section.faqSection .faqItem:first-child .faqQuestion {
+    min-height: 72px;
+    padding-top: 0;
+    line-height: 36px;
+}
+
+section.faqSection .faqItem.is-open .faqQuestion {
+    color: var(--black);
+}
+
+section.faqSection .faqItem:not(:first-child) .faqQuestion {
+    min-height: 43px;
+}
+
+section.faqSection .faqQuestion>span:first-child {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 527px;
+}
+
+section.faqSection .faqIcon {
+    position: relative;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+}
+
+section.faqSection .faqIcon img {
+    position: absolute;
+    width: 17.5px;
+    height: 17.5px;
+    left: 3.25px;
+    top: 3.25px;
+    transition: opacity 220ms ease;
+}
+
+section.faqSection .faqMinusIcon {
+    top: 11.25px;
+    height: 1.5px !important;
+    opacity: 0;
+}
+
+section.faqSection .faqItem.is-open .faqMinusIcon {
+    opacity: 1;
+}
+
+section.faqSection .faqItem.is-open .faqPlusIcon {
+    opacity: 0;
+}
+
+section.faqSection .faqAnswer {
+    max-width: 534px;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    opacity: 0;
+    color: #4A4C56;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    transition: max-height 360ms ease, opacity 220ms ease, padding 360ms ease;
+}
+
+section.faqSection .faqItem.is-open .faqAnswer {
+    padding-top: 16px;
+    opacity: 1;
+}
+
+section.faqSection .faqAnswer[hidden] {
+    display: none;
+}
+
+@media screen and (max-width: 1360px) {
+    section.faqSection .faqIntro h2 {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    section.faqSection .faqContainer {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        column-gap: 40px;
+    }
+
+    section.faqSection .faqIntro h2 {
+        font-size: 40px;
+    }
+
+    section.faqSection .faqQuestion {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    section.faqSection .faqIntro h2 {
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    section.faqSection {
+        padding: 64px 20px;
+    }
+
+    section.faqSection .faqContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: start;
+    }
+
+    section.faqSection .faqIntro {
+        gap: 0;
+    }
+
+    section.faqSection .faqEyebrow {
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    section.faqSection .faqEyebrowPill {
+        height: 29px;
+        padding: 0 8px;
+        font-size: 14px;
+        letter-spacing: 0.14px;
+    }
+
+    section.faqSection .faqEyebrowPill .faqBullet {
+        font-size: 18px;
+    }
+
+    section.faqSection .faqLabelDesktop {
+        display: none;
+    }
+
+    section.faqSection .faqLabelMobile {
+        display: inline;
+        line-height: 13px;
+    }
+
+    section.faqSection .faqIntro h2 {
+        font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+    }
+
+    section.faqSection .faqDescription {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    section.faqSection .faqContact {
+        margin-top: 16px;
+        gap: 12px;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    section.faqSection .faqContact a {
+        line-height: 1;
+    }
+
+    section.faqSection .faqContactButton {
+        height: 40px;
+        margin-top: 24px;
+        font-size: 14px;
+        letter-spacing: -0.56px;
+    }
+
+    section.faqSection .faqContactButton>span:first-child,
+    section.faqSection .faqContactArrow {
+        height: 40px;
+    }
+
+    section.faqSection .faqContactButton>span:first-child {
+        padding: 0 16px;
+    }
+
+    section.faqSection .faqContactArrow {
+        width: 40px;
+    }
+
+    section.faqSection .faqQuestion {
+        min-height: 39px;
+        padding: 15px 0 0;
+        align-items: flex-start;
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: -0.4px;
+    }
+
+    section.faqSection .faqItem:first-child {
+        padding-top: 16px;
+    }
+
+    section.faqSection .faqItem:first-child .faqQuestion {
+        min-height: 60px;
+        padding: 0;
+        line-height: 30px;
+    }
+
+    section.faqSection .faqQuestion>span:first-child {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    section.faqSection .faqList {
+        gap: 16px;
+    }
+
+    section.faqSection .faqIcon img {
+        width: 17.5px;
+        height: 17.5px;
+        left: 3.25px;
+        top: 3.25px;
+    }
+
+    section.faqSection .faqIcon .faqMinusIcon {
+        top: 11.25px;
+        height: 1.5px;
+    }
+
+    section.faqSection .faqAnswer {
+        max-width: 353px;
+        padding: 0 24px 0 0;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    section.faqSection .faqItem.is-open .faqAnswer {
+        padding-top: 8px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    section.faqSection .faqIntro h2 {
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================================================================================== */
+/* Call to Action Section */
+/* ===================================================================================================================== */
+section.callToAction {
+    padding: 0px 20px;
+}
+
+section.callToAction .callToActionContainer {
+    max-width: 1392px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    padding: 320px 48px 53px 48px;
+    background: url("../assets/call-to-action-background.png") no-repeat center center;
+    background-size: cover;
+    border-radius: 32px;
+    overflow: hidden;
+    position: relative;
+
+    -webkit-mask-image: url("../assets/call-to-action-mask.png");
+    mask-image: url("../assets/call-to-action-mask.png");
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-size: cover;
+    mask-size: cover;
+
+    -webkit-mask-position: left center;
+    mask-position: left center;
+}
+
+section.callToAction .callToActionContainer::after {
+    content: "";
+    position: absolute;
+    bottom: 75px;
+    right: 0;
+    width: 64px;
+    height: 64px;
+    background: transparent;
+    border-radius: 0 0 32px 0;
+    pointer-events: none;
+    box-shadow: 10px 10px 0px white;
+}
+
+section.callToAction .callToActionContainer .shapContainer {
+    max-width: 713px;
+    width: 100%;
+    min-height: 317px;
+    padding: 33px 23px 27px 33px;
+    background: var(--white);
+
+    -webkit-mask-image: url("../assets/call-to-action-shap-mask.png");
+    mask-image: url("../assets/call-to-action-shap-mask.png");
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+section.callToAction .callToActionContainer .shapContainer h3 {
+    color: #1F3D2B;
+    font-family: "Archivo Black";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -1px;
+}
+
+section.callToAction .callToActionContainer .shapContainer h3:nth-child(1) {
+    padding-left: 270px;
+}
+
+section.callToAction .callToActionContainer .shapContainer .shapContainerParagraph {
+    color: #4A4C56;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    display: flex;
+    justify-content: end;
+    margin-top: -30px;
+}
+
+section.callToAction .callToActionContainer .shapContainer .shapContainerParagraph p {
+    max-width: 325px;
+    width: 100%;
+}
+
+section.callToAction .callContactButton {
+    display: inline-flex;
+    align-items: center;
+    height: 44px;
+    margin-top: 32px;
+    color: var(--white);
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.64px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+section.callToAction .callContactButton:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+section.callToAction .callContactButton:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 4px;
+}
+
+section.callToAction .callContactButton>span:first-child,
+section.callToAction .callContactArrow {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -113,939 +1551,188 @@ section.serviceHero {
     background: var(--light-green);
 }
 
-.servicePageButton > span:first-child {
+section.callToAction .callContactButton>span:first-child {
     padding: 0 20px;
     border-radius: 40px;
 }
 
-.servicePageButtonArrow {
+section.callToAction .callContactArrow {
     width: 44px;
-    margin-left: -2px;
+    margin-left: -4px;
     border-radius: 50%;
 }
 
-.servicePageButtonArrow img {
+section.callToAction .callContactArrow img {
     width: 12px;
     height: 12px;
 }
 
-.servicePageButton:hover {
-    opacity: 0.9;
-}
-
-.serviceHeroPhone,
-.serviceReliabilityPhone {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    color: var(--green);
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1;
-}
-
-.serviceHeroPhone img,
-.serviceReliabilityPhone img {
-    width: 20px;
-    height: 20px;
-}
-
-.serviceHeroVisual {
-    position: relative;
-    margin-top: 32px;
-}
-
-.serviceHeroImage {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.serviceHeroTabs {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    max-width: 100%;
-    padding: 8px;
-    overflow-x: auto;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.3);
-    scrollbar-width: none;
-}
-
-.serviceHeroTabs::-webkit-scrollbar {
-    display: none;
-}
-
-.serviceHeroTabs a {
-    display: flex;
-    align-items: center;
-    min-height: 48px;
-    padding: 10px 16px;
-    border: 1px solid #ECEFF3;
-    border-radius: 8px;
-    background: var(--white);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-    color: var(--green);
-    font-family: "Archivo Black", sans-serif;
-    font-size: 16px;
-    line-height: 1.1;
-    white-space: nowrap;
-}
-
-.serviceHeroTabs a.active {
-    border-color: var(--green);
-    background: var(--green);
-    color: var(--white);
-}
-
-section.servicePageAreas {
-    padding: 0 20px;
-}
-
-.servicePageAreas .servicePageContainer {
-    padding: 0 0 80px;
-}
-
-.serviceAreaNames {
-    display: flex;
-    justify-content: space-between;
-    gap: 32px;
-    margin-top: 32px;
-}
-
-.serviceAreaNames h2 {
-    color: var(--green);
-    font-family: "Archivo Black", sans-serif;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 1.2;
-    letter-spacing: -1px;
-}
-
-section.serviceIncluded {
-    padding: 80px 20px;
-}
-
-.serviceIncludedHeading {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 40px;
-    margin-top: 16px;
-}
-
-.serviceIncludedHeading h2 {
-    max-width: 611px;
-    color: var(--green);
-    font-family: "Archivo Black", sans-serif;
-    font-size: 48px;
-    font-weight: 400;
-    line-height: 1.2;
-    letter-spacing: -1px;
-}
-
-.serviceIncludedHeading p {
-    max-width: 473px;
-    color: #4A4C56;
-    font-family: Inter, sans-serif;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.serviceIncludedContent {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 48px;
-    margin-top: 48px;
-}
-
-.serviceIncludedVisual {
-    position: relative;
-    min-height: 478px;
-}
-
-.serviceIncludedImage {
-    width: 100%;
-    height: 478px;
-    background: url("../assets/service-page/included-image.png") center / cover no-repeat;
-    -webkit-mask: url("../assets/service-page/included-mask.svg") center / 100% 100% no-repeat;
-    mask: url("../assets/service-page/included-mask.svg") center / 100% 100% no-repeat;
-}
-
-.serviceIncludedVisual .servicePageButton {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.serviceIncludedList {
-    display: flex;
-    flex-direction: column;
-}
-
-.serviceIncludedList article {
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-    padding: 0 0 12px;
-    margin-bottom: 12px;
-    border-bottom: 1px solid #DFE1E7;
-}
-
-.serviceIncludedList article:last-child {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    border-bottom: 0;
-}
-
-.serviceIncludedList article > img {
-    flex: 0 0 24px;
-    width: 24px;
-    height: 24px;
-}
-
-.serviceIncludedList h3 {
-    color: var(--green);
-    font-family: "Archivo Black", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.3;
-}
-
-.serviceIncludedList p {
-    margin-top: 4px;
-    color: #4A4C56;
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    letter-spacing: -1px;
-}
-
-.servicePage .why_sentry {
-    margin-top: 80px;
-}
-
-.servicePage .why_sentry .slider:first-child .sliderCardShap {
-    background: var(--light-green);
-}
-
-.servicePage .why_sentry .slider:first-child .sliderCardShap h1,
-.servicePage .why_sentry .slider:first-child .sliderCardShap p {
-    color: var(--white);
-}
-
-section.serviceReliability {
-    padding: 32px 20px 0;
-}
-
-.serviceReliabilityCta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 32px;
-    min-height: 255px;
-    padding: 48px;
-    margin-top: 32px;
-    border-radius: 32px;
-    background: var(--light-green);
-}
-
-.serviceReliabilityCta h2 {
-    max-width: 662px;
-    color: var(--white);
-    font-family: "Archivo Black", sans-serif;
-    font-size: 48px;
-    font-weight: 400;
-    line-height: 1.2;
-    letter-spacing: -1px;
-}
-
-.serviceReliabilityCta p {
-    margin-top: 16px;
-    color: #E9E9EA;
-    font-family: Inter, sans-serif;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.serviceReliabilityActions {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    flex: 0 0 auto;
-}
-
-.servicePageButtonLight {
-    color: var(--green);
-}
-
-.servicePageButtonLight > span:first-child,
-.servicePageButtonLight .servicePageButtonArrow {
-    background: var(--white);
-}
-
-.serviceReliabilityPhone {
-    color: var(--white);
-}
-
-/* ===================================================================================================================== */
-/* Service Footer */
-/* ===================================================================================================================== */
-footer.serviceFooter {
-    position: relative;
-    isolation: isolate;
-    max-width: 1392px;
-    height: 480px;
-    margin: 0 auto;
-    overflow: hidden;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.serviceFooterShape {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.serviceFooterContent {
-    position: relative;
-    z-index: 1;
-    min-height: 480px;
-    padding: 0;
-}
-
-.serviceFooterAbout {
-    position: absolute;
-    top: 117px;
-    left: 49px;
-    width: 417px;
-    max-width: none;
-}
-
-.serviceFooterLogo {
-    position: relative;
-    overflow: hidden;
-    width: 64px;
-    height: 64px;
-    flex: 0 0 64px;
-}
-
-.serviceFooterLogo img {
-    position: absolute;
-    top: -61px;
-    left: -55px;
-    width: 175px;
-    max-width: none;
-    height: 176px;
-}
-
-.serviceFooterBrand {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-left: -9px;
-}
-
-.serviceFooterBrand > div:last-child {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 7px;
-    padding-top: 8px;
-}
-
-.serviceFooterBrand strong {
-    color: var(--white);
-    font-family: Georgia, serif;
-    font-size: 24px;
-    font-weight: 400;
-    letter-spacing: 6px;
-    line-height: 1;
-}
-
-.serviceFooterBrand span {
-    color: var(--white);
-    font-family: Inter, sans-serif;
-    font-size: 9px;
-    letter-spacing: -0.18px;
-    line-height: 1;
-    white-space: nowrap;
-}
-
-.serviceFooterAbout p {
-    max-width: 417px;
-    margin-top: 38px;
-    font-family: Inter, sans-serif;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.serviceFooterColumn {
-    position: absolute;
-    top: 55px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-}
-
-.serviceFooterContent > .serviceFooterColumn:nth-child(2) {
-    left: 606px;
-}
-
-.serviceFooterContent > .serviceFooterColumn:nth-child(3) {
-    left: 824px;
-}
-
-.serviceFooterContent > .serviceFooterColumn:nth-child(4) {
-    left: 1068px;
-}
-
-.serviceFooterColumn h2 {
-    margin-bottom: 10px;
-    color: var(--white);
-    font-family: "Archivo Black", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.5;
-}
-
-.serviceFooterColumn a,
-.serviceFooterColumn span {
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-    line-height: 1.2;
-}
-
-.serviceFooterContact a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.serviceFooterContact a img {
-    flex: 0 0 24px;
-    width: 24px;
-    height: 24px;
-    opacity: 0.8;
-}
-
-.serviceFooterBottom {
-    position: absolute;
-    right: 45px;
-    bottom: 49px;
-    left: 49px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    min-height: 49px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(72, 102, 84, 0.5);
-    font-family: Inter, sans-serif;
-    font-size: 14px;
-    line-height: 1.2;
-}
-
-.serviceFooterBottom > div:first-child {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-}
-
-.serviceFooterBottom i {
-    width: 1px;
-    align-self: stretch;
-    background: rgba(241, 242, 243, 0.3);
-}
-
-.serviceFooterSocials {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.serviceFooterSocials a {
-    position: relative;
-    display: block;
-    width: 29px;
-    height: 29px;
-}
-
-.serviceFooterSocials a img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.serviceFooterSocials a img + img {
-    inset: 7px;
-    width: 15px;
-    height: 15px;
-}
-
-@media screen and (max-width: 1160px) {
-    section.serviceHero {
-        padding-top: 64px;
-    }
-
-    .serviceHeroIntro > h1,
-    .serviceIncludedHeading h2,
-    .serviceReliabilityCta h2 {
-        font-size: 40px;
-    }
-
-    .serviceAreaNames h2 {
-        font-size: 24px;
-    }
-
-    .serviceIncludedHeading {
-        gap: 24px;
-    }
-
-    .serviceIncludedHeading p {
-        font-size: 16px;
-    }
-
-    .serviceIncludedContent {
-        gap: 32px;
-    }
-
-    .serviceReliabilityCta {
-        padding: 32px;
-    }
-
-    .serviceFooterContent {
-        gap: 20px;
-    }
-}
-
-@media screen and (max-width: 880px) {
-    .serviceHeroHeading,
-    .sectionEyebrow {
-        gap: 8px;
-    }
-
-    .serviceHeroHeading li,
-    .sectionEyebrow li {
-        padding: 9px 8px;
-        font-size: 14px;
-    }
-
-    .serviceHeroIntro > h1,
-    .serviceIncludedHeading h2,
-    .serviceReliabilityCta h2 {
-        font-size: 30px;
-    }
-
-    .serviceHeroIntro > p,
-    .serviceIncludedHeading p {
-        font-size: 14px;
-    }
-
-    .serviceAreaNames {
-        gap: 16px;
-    }
-
-    .serviceAreaNames h2 {
-        font-size: 18px;
-    }
-
-    .serviceIncludedHeading {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .serviceIncludedContent {
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
-
-    .serviceIncludedImage,
-    .serviceIncludedVisual {
-        min-height: 360px;
-        height: 360px;
-    }
-
-    .serviceReliabilityCta {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .serviceFooter {
-        margin-right: 20px !important;
-        margin-left: 20px !important;
-    }
-
-    .serviceFooterContent {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        min-height: 620px;
-        padding-bottom: 124px;
-    }
-
-    footer.serviceFooter {
-        min-height: 620px;
-    }
-
-    .serviceFooterBottom {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    section.serviceHero {
-        padding: 48px 12px 0;
-    }
-
-    .serviceHeroIntro > h1 {
-        font-size: 28px;
-    }
-
-    .serviceHeroActions {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .serviceHeroVisual {
-        margin-top: 24px;
-    }
-
-    .serviceHeroImage {
-        min-height: 300px;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 24px;
-    }
-
-    .serviceHeroTabs {
-        right: 8px;
-        bottom: 8px;
-        left: 8px;
-        padding: 6px;
-        border-radius: 12px;
-    }
-
-    .serviceHeroTabs a {
-        min-height: 40px;
-        padding: 8px 12px;
-        font-size: 12px;
-    }
-
-    section.servicePageAreas {
+@media screen and (max-width: 820px) {
+    section.callToAction {
         padding: 0 12px;
     }
 
-    .servicePageAreas .servicePageContainer {
-        padding-bottom: 48px;
-    }
-
-    .serviceAreaNames {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
-        margin-top: 20px;
-    }
-
-    .serviceAreaNames h2 {
-        font-size: 20px;
-    }
-
-    section.serviceIncluded,
-    section.serviceReliability {
-        padding: 48px 12px 0;
-    }
-
-    .serviceIncludedHeading h2,
-    .serviceReliabilityCta h2 {
-        font-size: 28px;
-    }
-
-    .serviceIncludedContent {
-        margin-top: 32px;
-    }
-
-    .serviceIncludedImage,
-    .serviceIncludedVisual {
-        min-height: 300px;
-        height: 300px;
-    }
-
-    .serviceIncludedList p {
-        font-size: 14px;
-    }
-
-    .servicePage .why_sentry {
-        margin-top: 64px;
-    }
-
-    .serviceReliabilityCta {
-        padding: 28px 20px;
+    section.callToAction .callToActionContainer {
+        min-height: 0;
+        padding: 180px 12px 12px;
         border-radius: 24px;
     }
 
-    .serviceReliabilityActions {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
+    section.callToAction .callToActionContainer .shapContainer {
+        max-width: 550px;
+        min-height: 0;
+        padding: 28px 20px 24px;
     }
 
-    footer.serviceFooter {
-        min-height: 760px;
-        margin-top: 48px;
-        margin-right: 12px !important;
-        margin-left: 12px !important;
+    section.callToAction .callToActionContainer::after {
+        bottom: 48px;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 0 0 24px 0;
     }
 
-    .serviceFooterContent {
-        display: flex;
-        flex-direction: column;
-        min-height: 760px;
-        padding: 40px 24px 124px;
+    section.callToAction .callToActionContainer .shapContainer h3 {
+        font-size: 38px;
     }
 
-    .serviceFooterAbout {
-        max-width: 100%;
+    section.callToAction .callToActionContainer .shapContainer h3:nth-child(1) {
+        padding-left: 170px;
     }
 
-    .serviceFooterColumn {
-        gap: 12px;
-    }
-
-    .serviceFooterColumn h2 {
-        margin-bottom: 4px;
-    }
-
-    .serviceFooterBottom {
-        right: 24px;
-        bottom: 24px;
-        left: 24px;
-        gap: 20px;
-    }
-
-    .serviceFooterBottom > div:first-child {
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-}
-
-/* Tablet footer layout */
-@media screen and (max-width: 1100px) and (min-width: 731px) {
-    footer.serviceFooter {
-        width: calc(100% - 40px);
-        height: 480px;
-        min-height: 480px;
-        margin: 0 auto !important;
-    }
-
-    .serviceFooterContent {
-        min-height: 480px;
-    }
-
-    .serviceFooterAbout {
-        top: 116px;
-        left: 4%;
-        width: 34%;
-    }
-
-    .serviceFooterAbout p {
-        max-width: 100%;
-        font-size: 16px;
-    }
-
-    .serviceFooterContent > .serviceFooterColumn {
-        top: 55px;
-    }
-
-    .serviceFooterContent > .serviceFooterColumn:nth-child(2) {
-        left: 42% !important;
-    }
-
-    .serviceFooterContent > .serviceFooterColumn:nth-child(3) {
-        left: 61% !important;
-    }
-
-    .serviceFooterContent > .serviceFooterColumn:nth-child(4) {
-        left: 80% !important;
-    }
-
-    .serviceFooterColumn h2 {
-        font-size: 18px;
-    }
-
-    .serviceFooterColumn a,
-    .serviceFooterColumn span {
+    section.callToAction .callToActionContainer .shapContainer .shapContainerParagraph {
         font-size: 14px;
     }
 
-    .serviceFooterContact a span {
-        white-space: normal;
+    section.callToAction .callToActionContainer .shapContainer .shapContainerParagraph p {
+        max-width: 280px;
     }
 
-    .serviceFooterContact a img {
-        width: 20px;
-        height: 20px;
-        flex-basis: 20px;
+    section.callToAction .callContactButton {
+        height: 40px;
+        margin-top: 24px;
+        font-size: 14px;
+        letter-spacing: -0.56px;
     }
 
-    .serviceFooterBottom {
-        right: 4%;
-        bottom: 8%;
-        left: 4%;
+    section.callToAction .callContactButton>span:first-child,
+    section.callToAction .callContactArrow {
+        height: 40px;
+    }
+
+    section.callToAction .callContactButton>span:first-child {
+        padding: 0 16px;
+    }
+
+    section.callToAction .callContactArrow {
+        width: 40px;
     }
 }
 
-/* Phone layout from Figma node 10330:4444 */
-@media screen and (max-width: 730px) {
-    footer.serviceFooter {
-        width: 100%;
-        max-width: 377px;
-        height: 679px;
-        min-height: 679px;
-        margin: 0 auto !important;
+@media screen and (max-width: 620px) {
+    section.callToAction .callToActionContainer::after {
+        bottom: 47px;
     }
 
-    .serviceFooterShape {
-        content: url("../assets/service-page/footer-phone-shape.svg");
+    section.callToAction .callToActionContainer .shapContainer {
+        max-width: 500px;
     }
 
-    .serviceFooterContent {
-        min-height: 679px;
-        padding: 0;
+    section.callToAction .callToActionContainer .shapContainer h3 {
+        font-size: 34px;
     }
 
-    .serviceFooterAbout {
-        top: 32px;
-        left: 12px;
-        width: calc(100% - 24px);
-        margin: 0;
+    section.callToAction .callToActionContainer .shapContainer h3:nth-child(1) {
+        padding-left: 170px;
     }
 
-    .serviceFooterBrand {
-        gap: 4px;
-        margin-left: 0;
+    section.callToAction .callToActionContainer .shapContainer .shapContainerParagraph {
+        font-size: 13px;
     }
 
-    .serviceFooterLogo {
-        width: 32px;
-        height: 32px;
-        flex-basis: 32px;
+    section.callToAction .callToActionContainer .shapContainer .shapContainerParagraph p {
+        max-width: 250px;
     }
 
-    .serviceFooterLogo img {
-        top: -30.5px;
-        left: -27.7px;
-        width: 87.7px;
-        height: 88px;
+    section.callToAction .callContactButton {
+        height: 40px;
+        margin-top: 20px;
+        font-size: 13px;
     }
 
-    .serviceFooterBrand > div:last-child {
-        gap: 3.5px;
-        padding-top: 4px;
+    section.callToAction .callContactButton>span:first-child,
+    section.callToAction .callContactArrow {
+        height: 40px;
     }
 
-    .serviceFooterBrand strong {
-        font-size: 12px;
-        letter-spacing: 3px;
+    section.callToAction .callContactButton>span:first-child {
+        padding: 0 14px;
     }
 
-    .serviceFooterBrand span {
-        font-size: 4.5px;
-        letter-spacing: -0.09px;
-        opacity: 0.8;
+    section.callToAction .callContactArrow {
+        width: 40px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    section.callToAction .callToActionContainer {
+        padding: 107px 12px 12px 12px;
+        background: url("../assets/call-to-action-phone-background.png") no-repeat center center;
+        background-size: cover;
+        -webkit-mask-image: url("../assets/call-to-action-phone-mask.png");
+        mask-image: url("../assets/call-to-action-phone-mask.png");
+
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
     }
 
-    .serviceFooterAbout p {
-        max-width: 100%;
+    section.callToAction .callToActionContainer::after {
+        display: none;
+    }
+
+    section.callToAction .callToActionContainer .shapContainer {
+        max-width: 260px;
+        -webkit-mask-image: url("../assets/call-to-action-phone-shap-mask.png");
+        mask-image: url("../assets/call-to-action-phone-shap-mask.png");
+        padding: 6px 18px 12px 8px;
+    }
+
+    section.callToAction .callToActionContainer .shapContainer h3 {
+        font-size: 24px;
+    }
+
+    section.callToAction .callToActionContainer .shapContainer h3:nth-child(1) {
+        padding-left: 60px;
+    }
+
+    section.callToAction .callToActionContainer .shapContainer .shapContainerParagraph {
         margin-top: 16px;
         font-size: 14px;
-        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    section.callToAction .callToActionContainer {
+        -webkit-mask-size: cover;
+        mask-size: cover;
     }
 
-    .serviceFooterContent > .serviceFooterColumn {
-        top: 216px;
-        left: auto !important;
-        right: auto;
-        display: flex;
-        gap: 14px;
+    section.callToAction .callToActionContainer::after {
+        display: block;
+        bottom: 38px;
+        width: 50px;
+        height: 50px;
+        border-radius: 0 0 20px 0;
     }
 
-    .serviceFooterContent > .serviceFooterColumn:nth-child(2) {
-        left: 12px !important;
+    section.callToAction .callToActionContainer .shapContainer {
+        height: 248px;
     }
 
-    .serviceFooterContent > .serviceFooterColumn:nth-child(3) {
-        right: 12px;
-    }
-
-    .serviceFooterContent > .serviceFooterColumn:nth-child(4) {
-        top: 402px;
-        right: 12px;
-        left: 12px !important;
-    }
-
-    .serviceFooterColumn h2 {
-        margin: 0;
-        font-size: 18px;
-        line-height: 1.5;
-    }
-
-    .serviceFooterColumn a,
-    .serviceFooterColumn span {
+    section.callToAction .callToActionContainer .shapContainer .shapContainerParagraph {
         font-size: 14px;
-        line-height: normal;
-    }
-
-    .serviceFooterContact a img {
-        width: 20px;
-        height: 20px;
-        flex-basis: 20px;
-    }
-
-    .serviceFooterBottom {
-        top: 557px;
-        right: 12px;
-        bottom: auto;
-        left: 12px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 24px;
-        min-height: 0;
-        padding-top: 12px;
-        font-size: 12px;
-    }
-
-    .serviceFooterBottom > div:first-child {
-        flex-wrap: wrap;
-        gap: 8px;
-        width: 100%;
-        line-height: 1.2;
-    }
-
-    .serviceFooterBottom > div:first-child i {
-        height: 14px;
-    }
-
-    .serviceFooterSocials {
-        gap: 12px;
-    }
-
-    .serviceFooterSocials a,
-    .serviceFooterSocials a img {
-        width: 28px;
-        height: 28px;
     }
 }
