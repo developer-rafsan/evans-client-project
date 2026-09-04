@@ -401,8 +401,8 @@ footer.serviceFooter {
     position: relative;
     isolation: isolate;
     max-width: 1392px;
-    min-height: 480px;
-    margin: -24px auto 0;
+    height: 480px;
+    margin: 0 auto;
     overflow: hidden;
     color: rgba(255, 255, 255, 0.8);
 }
@@ -418,17 +418,16 @@ footer.serviceFooter {
 .serviceFooterContent {
     position: relative;
     z-index: 1;
-    display: grid;
-    grid-template-columns: 1.5fr 0.8fr 0.8fr 1.5fr;
-    gap: 32px;
     min-height: 480px;
-    padding: 44px 36px 32px;
+    padding: 0;
 }
 
 .serviceFooterAbout {
-    max-width: 330px;
-    align-self: start;
-    margin-top: 72px;
+    position: absolute;
+    top: 117px;
+    left: 49px;
+    width: 417px;
+    max-width: none;
 }
 
 .serviceFooterLogo {
@@ -452,13 +451,15 @@ footer.serviceFooter {
     display: flex;
     align-items: center;
     gap: 8px;
+    margin-left: -9px;
 }
 
-.serviceFooterBrand > div {
+.serviceFooterBrand > div:last-child {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 7px;
+    padding-top: 8px;
 }
 
 .serviceFooterBrand strong {
@@ -480,17 +481,32 @@ footer.serviceFooter {
 }
 
 .serviceFooterAbout p {
-    margin-top: 16px;
+    max-width: 417px;
+    margin-top: 38px;
     font-family: Inter, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
 }
 
 .serviceFooterColumn {
+    position: absolute;
+    top: 55px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+}
+
+.serviceFooterContent > .serviceFooterColumn:nth-child(2) {
+    left: 606px;
+}
+
+.serviceFooterContent > .serviceFooterColumn:nth-child(3) {
+    left: 824px;
+}
+
+.serviceFooterContent > .serviceFooterColumn:nth-child(4) {
+    left: 1068px;
 }
 
 .serviceFooterColumn h2 {
@@ -524,13 +540,14 @@ footer.serviceFooter {
 
 .serviceFooterBottom {
     position: absolute;
-    right: 36px;
-    bottom: 32px;
-    left: 36px;
+    right: 45px;
+    bottom: 49px;
+    left: 49px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
+    min-height: 49px;
     padding-top: 20px;
     border-top: 1px solid rgba(72, 102, 84, 0.5);
     font-family: Inter, sans-serif;
@@ -820,5 +837,215 @@ footer.serviceFooter {
     .serviceFooterBottom > div:first-child {
         flex-wrap: wrap;
         gap: 8px;
+    }
+}
+
+/* Tablet footer layout */
+@media screen and (max-width: 1100px) and (min-width: 731px) {
+    footer.serviceFooter {
+        width: calc(100% - 40px);
+        height: 480px;
+        min-height: 480px;
+        margin: 0 auto !important;
+    }
+
+    .serviceFooterContent {
+        min-height: 480px;
+    }
+
+    .serviceFooterAbout {
+        top: 116px;
+        left: 4%;
+        width: 34%;
+    }
+
+    .serviceFooterAbout p {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    .serviceFooterContent > .serviceFooterColumn {
+        top: 55px;
+    }
+
+    .serviceFooterContent > .serviceFooterColumn:nth-child(2) {
+        left: 42% !important;
+    }
+
+    .serviceFooterContent > .serviceFooterColumn:nth-child(3) {
+        left: 61% !important;
+    }
+
+    .serviceFooterContent > .serviceFooterColumn:nth-child(4) {
+        left: 80% !important;
+    }
+
+    .serviceFooterColumn h2 {
+        font-size: 18px;
+    }
+
+    .serviceFooterColumn a,
+    .serviceFooterColumn span {
+        font-size: 14px;
+    }
+
+    .serviceFooterContact a span {
+        white-space: normal;
+    }
+
+    .serviceFooterContact a img {
+        width: 20px;
+        height: 20px;
+        flex-basis: 20px;
+    }
+
+    .serviceFooterBottom {
+        right: 4%;
+        bottom: 8%;
+        left: 4%;
+    }
+}
+
+/* Phone layout from Figma node 10330:4444 */
+@media screen and (max-width: 730px) {
+    footer.serviceFooter {
+        width: 100%;
+        max-width: 377px;
+        height: 679px;
+        min-height: 679px;
+        margin: 0 auto !important;
+    }
+
+    .serviceFooterShape {
+        content: url("../assets/service-page/footer-phone-shape.svg");
+    }
+
+    .serviceFooterContent {
+        min-height: 679px;
+        padding: 0;
+    }
+
+    .serviceFooterAbout {
+        top: 32px;
+        left: 12px;
+        width: calc(100% - 24px);
+        margin: 0;
+    }
+
+    .serviceFooterBrand {
+        gap: 4px;
+        margin-left: 0;
+    }
+
+    .serviceFooterLogo {
+        width: 32px;
+        height: 32px;
+        flex-basis: 32px;
+    }
+
+    .serviceFooterLogo img {
+        top: -30.5px;
+        left: -27.7px;
+        width: 87.7px;
+        height: 88px;
+    }
+
+    .serviceFooterBrand > div:last-child {
+        gap: 3.5px;
+        padding-top: 4px;
+    }
+
+    .serviceFooterBrand strong {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .serviceFooterBrand span {
+        font-size: 4.5px;
+        letter-spacing: -0.09px;
+        opacity: 0.8;
+    }
+
+    .serviceFooterAbout p {
+        max-width: 100%;
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .serviceFooterContent > .serviceFooterColumn {
+        top: 216px;
+        left: auto !important;
+        right: auto;
+        display: flex;
+        gap: 14px;
+    }
+
+    .serviceFooterContent > .serviceFooterColumn:nth-child(2) {
+        left: 12px !important;
+    }
+
+    .serviceFooterContent > .serviceFooterColumn:nth-child(3) {
+        right: 12px;
+    }
+
+    .serviceFooterContent > .serviceFooterColumn:nth-child(4) {
+        top: 402px;
+        right: 12px;
+        left: 12px !important;
+    }
+
+    .serviceFooterColumn h2 {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .serviceFooterColumn a,
+    .serviceFooterColumn span {
+        font-size: 14px;
+        line-height: normal;
+    }
+
+    .serviceFooterContact a img {
+        width: 20px;
+        height: 20px;
+        flex-basis: 20px;
+    }
+
+    .serviceFooterBottom {
+        top: 557px;
+        right: 12px;
+        bottom: auto;
+        left: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 24px;
+        min-height: 0;
+        padding-top: 12px;
+        font-size: 12px;
+    }
+
+    .serviceFooterBottom > div:first-child {
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+        line-height: 1.2;
+    }
+
+    .serviceFooterBottom > div:first-child i {
+        height: 14px;
+    }
+
+    .serviceFooterSocials {
+        gap: 12px;
+    }
+
+    .serviceFooterSocials a,
+    .serviceFooterSocials a img {
+        width: 28px;
+        height: 28px;
     }
 }
