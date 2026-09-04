@@ -4,9 +4,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLC - Services</title>
-</head>
-<body>
+    <title>Sentry - Services</title>
 
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/service.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+
+<body class="servicePage">
+    <!-- ************************ -->
+    <!-- Header -->
+    <!-- ************************ -->
+    <header>
+        <div class="headerContainer">
+            <div class="leftSite">
+                <div class="logo">
+                    <a href="../index.html"><img src="../assets/logo.png" alt="Sentry Landscaping LLC Logo"></a>
+                </div>
+                <div class="headerMenu" id="headerMenu">
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#why-sentry">Why Sentry</a></li>
+                        <li><a href="#testimonial">Testimonial</a></li>
+                        <li><a href="#service-areas">Areas served</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rightSite">
+                <a href="tel:+18458004783" class="number"><img src="../assets/icons/phone.svg" alt="Phone Icon"><p>(845) 800-4783</p></a>
+                <a href="quate.html" class="quoteBtn serviceHeaderQuote"><p>Request a Quote</p><span class="quoteBtnArrow"><img src="../assets/icons/arrow-up-right.svg" alt="Arrow Up Right Icon"></span></a>
+                <button class="menuIcon" type="button" aria-label="Open menu"><img src="../assets/icons/menu.svg" alt="Menu Icon"></button>
+            </div>
+        </div>
+
+        <div class="phoneSideMenu" id="phoneSideMenu">
+            <div class="phoneMenuContainer">
+                <div class="phoneMenuHeader">
+                    <button class="closeIcon" type="button" aria-label="Close menu"><img src="../assets/icons/arrow-close.svg" alt="Close Icon"></button>
+                    <div class="logo"><a href="../index.html"><img src="../assets/logo.png" alt="Sentry Landscaping LLC Logo"></a></div>
+                </div>
+                <div class="phoneMenuBody">
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#why-sentry">Why Sentry</a></li>
+                        <li><a href="#testimonial">Testimonial</a></li>
+                        <li><a href="#service-areas">Areas served</a></li>
+                        <li><a href="quate.html">Request a Quote</a></li>
+                        <li><a href="tel:+18458004783">(845) 800-4783</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ************************ -->
+    <!-- Service Hero -->
+    <!-- ************************ -->
+    <section class="serviceHero" id="services">
+        <div class="serviceHeroIntro">
+            <ul class="serviceHeroHeading"><li><span aria-hidden="true">•</span>Services</li><div class="line"></div></ul>
+            <h1>Professional property maintenance across Orange, Ulster &amp; Sullivan counties</h1>
+            <p>Reliable property care for residential, commercial, Airbnb, and large properties, tailored to keep outdoor spaces clean, maintained, and ready year-round.</p>
+            <div class="serviceHeroActions">
+                <a class="servicePageButton" href="quate.html"><span>Request a Quote</span><span class="servicePageButtonArrow" aria-hidden="true"><img src="../assets/icons/arrow-up-right.svg" alt=""></span></a>
+                <a class="serviceHeroPhone" href="tel:+18458004783"><img src="../assets/service-page/phone.svg" alt=""><span>(845) 800-4783</span></a>
+            </div>
+        </div>
+        <div class="serviceHeroVisual">
+            <img class="serviceHeroImage" src="../assets/service-page/hero-image.png" alt="Sentry landscaping truck and trailer on a property">
+            <div class="serviceHeroTabs" role="list" aria-label="Sentry services">
+                <a class="active" href="#included" role="listitem">Property Maintenance</a>
+                <a href="#included" role="listitem">Lawn, Hedge &amp; Landscape Care</a>
+                <a href="#included" role="listitem">Mulch, Rock Beds &amp; Planting Areas</a>
+                <a href="#included" role="listitem">Property Cleanups &amp; Pressure Washing</a>
+                <a href="#included" role="listitem">Excavation &amp; Drainage</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ************************ -->
+    <!-- Service Areas -->
+    <!-- ************************ -->
+    <section class="servicePageAreas" id="service-areas">
+        <div class="servicePageContainer">
+            <ul class="sectionEyebrow"><li><span aria-hidden="true">•</span>Service Areas</li><div class="line"></div></ul>
+            <div class="serviceAreaNames"><h2>Orange County, NY</h2><h2>Ulster County, NY</h2><h2>Sullivan County, NY</h2></div>
+        </div>
+    </section>
+
+    <!-- ************************ -->
+    <!-- What's Included -->
+    <!-- ************************ -->
+    <section class="serviceIncluded" id="included">
+        <div class="servicePageContainer">
+            <div class="serviceIncludedIntro">
+                <ul class="sectionEyebrow"><li><span aria-hidden="true">•</span>What's Included</li><div class="line"></div></ul>
+                <div class="serviceIncludedHeading">
+                    <h2>Complete property care built around your needs</h2>
+                    <p>From routine lawn maintenance to trimming, planting, bed care, and seasonal upkeep, Sentry provides dependable property maintenance for homes, businesses, Airbnb rentals, and larger properties.</p>
+                </div>
+            </div>
+            <div class="serviceIncludedContent">
+                <div class="serviceIncludedVisual">
+                    <div class="serviceIncludedImage"></div>
+                    <a class="servicePageButton" href="quate.html"><span>Request Property Maintenance</span><span class="servicePageButtonArrow" aria-hidden="true"><img src="../assets/icons/arrow-up-right.svg" alt=""></span></a>
+                </div>
+                <div class="serviceIncludedList">
+                    <article><img src="../assets/service-page/included-check-circle.svg" alt=""><div><h3>Lawn Maintenance</h3><p>Routine mowing and general lawn care to help keep outdoor areas clean and well maintained.</p></div></article>
+                    <article><img src="../assets/service-page/included-check-circle.svg" alt=""><div><h3>Hedge &amp; Bush Trimming</h3><p>Careful trimming that keeps hedges and shrubs controlled, tidy, and professionally presented.</p></div></article>
+                    <article><img src="../assets/service-page/included-check-circle.svg" alt=""><div><h3>Weed Management</h3><p>Routine weed removal around lawns, beds, and landscaped areas.</p></div></article>
+                    <article><img src="../assets/service-page/included-check-circle.svg" alt=""><div><h3>Planting &amp; Bed Care</h3><p>Support for planting areas, mulch beds, rock beds, and landscape-bed maintenance.</p></div></article>
+                    <article><img src="../assets/service-page/included-check-circle.svg" alt=""><div><h3>Airbnb Property Maintenance</h3><p>Reliable outdoor upkeep designed to help rental properties stay guest-ready.</p></div></article>
+                    <article><img src="../assets/service-page/included-check-circle.svg" alt=""><div><h3>Large Property Care</h3><p>Flexible maintenance solutions for larger residential and commercial properties.</p></div></article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ************************ -->
+    <!-- Why Sentry -->
+    <!-- ************************ -->
+    <section class="why_sentry" id="why-sentry">
+        <div class="why_sentryContainer">
+            <ul class="heading"><li>Why Sentry</li><div class="line"></div></ul>
+            <div class="topPart">
+                <h1>Why do local property owners trust Sentry.</h1>
+                <p>Sentry earns local trust through reliable service, honest communication, consistent quality, and close attention to every property.</p>
+                <div class="buttonGroup"><button class="whySentryPrev" type="button" aria-label="Previous slide"><img src="../assets/icons/left-arrow-slider.svg" alt=""></button><button class="whySentryNext" type="button" aria-label="Next slide"><img src="../assets/icons/right-arrow-slider.svg" alt=""></button></div>
+            </div>
+            <div class="sliderContainer swiper">
+                <div class="sliders swiper-wrapper">
+                    <div class="slider swiper-slide"><div class="sliderCardShap"><h1>Attention to Detail</h1><p>Edges, corners, and finish work get the same care as the obvious areas.</p></div><img src="../assets/service-page/why-check-square.svg" alt=""></div>
+                    <div class="slider swiper-slide"><div class="sliderCardShap"><h1>Consistent Quality</h1><p>Every visit holds the same standard, not just the first one.</p></div><img src="../assets/service-page/why-clock.svg" alt=""></div>
+                    <div class="slider swiper-slide"><div class="sliderCardShap"><h1>Reliable Communication</h1><p>Calls returned, schedules confirmed, questions answered.</p></div><img src="../assets/service-page/why-message.svg" alt=""></div>
+                    <div class="slider swiper-slide"><div class="sliderCardShap"><h1>Local Property Knowledge</h1><p>Familiar with local terrain, drainage patterns, and seasonal timing.</p></div><img src="../assets/service-page/why-compass.svg" alt=""></div>
+                </div>
+                <div class="buttonGroup"><button class="whySentryPrev" type="button" aria-label="Previous slide"><img src="../assets/icons/left-arrow-slider.svg" alt=""></button><button class="whySentryNext" type="button" aria-label="Next slide"><img src="../assets/icons/right-arrow-slider.svg" alt=""></button></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ************************ -->
+    <!-- Reliability CTA -->
+    <!-- ************************ -->
+    <section class="serviceReliability" id="quote">
+        <div class="servicePageContainer">
+            <div class="serviceReliabilityCta">
+                <div><h2>Need reliable ongoing property care?</h2><p>Tell us about your property and the maintenance services you need.</p></div>
+                <div class="serviceReliabilityActions"><a class="servicePageButton servicePageButtonLight" href="quate.html"><span>Request a Quote</span><span class="servicePageButtonArrow" aria-hidden="true"><img src="../assets/icons/arrow-up-right.svg" alt=""></span></a><a class="serviceReliabilityPhone" href="tel:+18458004783"><img src="../assets/service-page/why-phone.svg" alt=""><span>(845) 800-4783</span></a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ************************ -->
+    <!-- Reviews -->
+    <!-- ************************ -->
+    <section class="review" id="testimonial">
+        <div class="reviewContainer">
+            <ul class="heading"><li>Reviews</li><div class="line"></div></ul>
+            <h1>What local property owners say about Sentry</h1>
+            <p>Verified customer reviews will appear here. The cards below are content placeholders no testimonials have been invented.</p>
+            <div class="reviewVisual">
+                <div class="featuredReview"><div class="featuredReviewContent"><div class="reviewStars"><img src="../assets/icons/star.svg" alt=""><img src="../assets/icons/star.svg" alt=""><img src="../assets/icons/star.svg" alt=""><img src="../assets/icons/star.svg" alt=""><img src="../assets/icons/star.svg" alt=""></div><p>“The team was incredibly professional and made me feel comfortable throughout my Mulch Installation. Highly recommended!”</p></div></div>
+                <div class="reviewControls"><button class="whySentryPrev" type="button" aria-label="Previous slide"><img src="../assets/icons/left-arrow-review.svg" alt=""></button><button class="whySentryNext" type="button" aria-label="Next slide"><img src="../assets/icons/right-arrow-review.svg" alt=""></button></div>
+                <div class="reviewControlsPhone"><button class="whySentryPrev" type="button" aria-label="Previous slide"><img src="../assets/icons/left-arrow-slider-review-phone.svg" alt=""></button><button class="whySentryNext" type="button" aria-label="Next slide"><img src="../assets/icons/right-arrow-slider-review-phone.svg" alt=""></button></div>
+            </div>
+            <div class="reviewContent">
+                <ul class="heading"><li>Reviews</li><div class="line"></div></ul>
+                <h1>What local property owners say about Sentry</h1>
+                <p class="reviewIntro">Verified customer reviews will appear here. The cards below are content placeholders no testimonials have been invented.</p>
+                <div class="reviewSlider swiper"><div class="reviewCards swiper-wrapper">
+                    <article class="reviewCard swiper-slide"><div class="reviewCardSource"><img src="../assets/icons/google-icon.svg" alt="Google"><strong>Google Review</strong></div><div class="reviewStars"><img src="../assets/icons/star.svg" alt=""><img src="../assets/icons/star.svg" alt=""><img src="../assets/icons/star.svg" alt=""><img src="../assets/icons/star.svg" alt=""><img src="../assets/icons/star.svg" alt=""></div><p>“The team was incredibly professional and made me feel comfortable throughout my Mulch Installation.”</p><div class="reviewAuthor"><strong>James Miller</strong><span>Bloomingburg, NY</span></div></article>
+                    <article class="reviewCard swiper-slide"><div class="reviewCardSource"><img src="../assets/icons/google-icon.svg" alt="Google"><strong>Google Review</strong></div><div class="reviewStars"><img src="../assets/icons/star.svg" alt=""><img src="../assets/icons/star.svg" alt=""><img src="../assets/icons/star.svg" alt=""><img src="../assets/icons/star.svg" alt=""><img src="../assets/icons/star.svg" alt=""></div><p>“The team was incredibly professional and made me feel comfortable throughout my Mulch Installation.”</p><div class="reviewAuthor"><strong>James Miller</strong><span>Bloomingburg, NY</span></div></article>
+                </div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ************************ -->
+    <!-- FAQ -->
+    <!-- ************************ -->
+    <section class="faqSection" id="faq">
+        <div class="faqContainer">
+            <div class="faqIntro"><div class="faqIntroContent"><div class="faqEyebrow"><span class="faqEyebrowPill"><span class="faqBullet">•</span><span>What You Need to Know</span></span></div><h2>What should you know before requesting landscaping service?</h2><p class="faqDescription">Straightforward answers about what we do, where we work, and how to get started.</p><div class="faqContact"><p>Have more questions?</p><a href="tel:+18458004783">(845) 800-4783</a><a class="faqContactButton" href="quate.html"><span>Request a Quote</span><span class="faqContactArrow"><img src="../assets/icons/arrow-up-right.svg" alt=""></span></a></div></div></div>
+            <div class="faqList" data-faq-list>
+                <article class="faqItem is-open"><h3><button class="faqQuestion" type="button" aria-expanded="true"><span>What types of properties do you maintain?</span><span class="faqIcon"><img class="faqMinusIcon" src="../assets/icons/faq-minus.svg" alt=""><img class="faqPlusIcon" src="../assets/icons/faq-plus.svg" alt=""></span></button></h3><div class="faqAnswer"><p>Sentry supports residential, commercial, Airbnb, and larger properties across selected communities.</p></div></article>
+                <article class="faqItem"><h3><button class="faqQuestion" type="button" aria-expanded="false"><span>Which areas do you serve?</span><span class="faqIcon"><img class="faqMinusIcon" src="../assets/icons/faq-minus.svg" alt=""><img class="faqPlusIcon" src="../assets/icons/faq-plus.svg" alt=""></span></button></h3><div class="faqAnswer" hidden><p>Sentry serves select communities across Sullivan and Orange Counties, New York.</p></div></article>
+                <article class="faqItem"><h3><button class="faqQuestion" type="button" aria-expanded="false"><span>Can I request a one-time seasonal cleanup?</span><span class="faqIcon"><img class="faqMinusIcon" src="../assets/icons/faq-minus.svg" alt=""><img class="faqPlusIcon" src="../assets/icons/faq-plus.svg" alt=""></span></button></h3><div class="faqAnswer" hidden><p>Yes. One-time seasonal cleanups can be requested for residential, commercial, and Airbnb properties.</p></div></article>
+                <article class="faqItem"><h3><button class="faqQuestion" type="button" aria-expanded="false"><span>Do you provide pressure washing?</span><span class="faqIcon"><img class="faqMinusIcon" src="../assets/icons/faq-minus.svg" alt=""><img class="faqPlusIcon" src="../assets/icons/faq-plus.svg" alt=""></span></button></h3><div class="faqAnswer" hidden><p>Pressure washing is available as part of Sentry’s property care services.</p></div></article>
+                <article class="faqItem"><h3><button class="faqQuestion" type="button" aria-expanded="false"><span>How can I request a quote?</span><span class="faqIcon"><img class="faqMinusIcon" src="../assets/icons/faq-minus.svg" alt=""><img class="faqPlusIcon" src="../assets/icons/faq-plus.svg" alt=""></span></button></h3><div class="faqAnswer" hidden><p>Call Sentry at (845) 800-4783 to discuss your property and request a quote.</p></div></article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ************************ -->
+    <!-- Final CTA -->
+    <!-- ************************ -->
+    <section class="callToAction"><div class="callToActionContainer"><div class="shapContainer"><h3>Ready to give </h3><h3>your property the care it deserves?</h3><div class="shapContainerParagraph"><p>Sentry will review your request and contact you to discuss the next steps.</p></div><a class="callContactButton" href="quate.html"><span>Request a Quote</span><span class="callContactArrow"><img src="../assets/icons/arrow-up-right.svg" alt=""></span></a></div></div></section>
+
+    <!-- ************************ -->
+    <!-- Footer -->
+    <!-- ************************ -->
+    <footer class="serviceFooter">
+        <img class="serviceFooterShape" src="../assets/service-page/footer-shape.svg" alt="">
+        <div class="serviceFooterContent">
+            <div class="serviceFooterAbout"><div class="serviceFooterBrand"><div class="serviceFooterLogo"><img src="../assets/service-page/footer-logo.png" alt=""></div><div><strong>SENTRY</strong><span>LANDSCAPING LLC</span></div></div><p>Sentry Landscaping LLC provides professional landscaping and property maintenance for homes, businesses, Airbnb properties, and large properties across selected communities in Sullivan and Orange Counties, New York.</p></div>
+            <div class="serviceFooterColumn"><h2>Quick Links</h2><a href="#services">Services</a><a href="#why-sentry">Why Sentry</a><a href="#testimonial">Reviews</a><a href="#service-areas">Areas we serve</a></div>
+            <div class="serviceFooterColumn"><h2>Service Areas</h2><span>Bloomingburg, NY</span><span>Wurtsboro, NY</span><span>Fair Oaks, NY</span><span>Rock Hill, NY</span></div>
+            <div class="serviceFooterColumn serviceFooterContact"><h2>Contact</h2><a href="#"><img src="../assets/service-page/footer-location.svg" alt=""><span>1234 Street Name, City, Country</span></a><a href="tel:+18458004783"><img src="../assets/service-page/footer-phone.svg" alt=""><span>(845) 800-4783</span></a><a href="mailto:info@sentry.com"><img src="../assets/service-page/footer-mail.svg" alt=""><span>info@sentry.com</span></a></div>
+            <div class="serviceFooterBottom"><div><span>All Rights Reserved ©2023 Sentry</span><i></i><a href="#">Privacy policy</a><i></i><a href="#">Terms of service</a></div><div class="serviceFooterSocials"><a href="#"><img src="../assets/service-page/footer-social-circle.svg" alt="Facebook"><img src="../assets/service-page/footer-facebook.svg" alt=""></a><a href="#"><img src="../assets/service-page/footer-x.svg" alt="X"></a><a href="#"><img src="../assets/service-page/footer-social-circle.svg" alt="LinkedIn"><img src="../assets/service-page/footer-linkedin.svg" alt=""></a><a href="#"><img src="../assets/service-page/footer-instagram.svg" alt="Instagram"></a></div></div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/main.js"></script>
 </body>
+
 </html>

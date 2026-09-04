@@ -2,7 +2,7 @@ const phoneSideMenu = document.getElementById("phoneSideMenu");
 const menuIcon = document.querySelector(".menuIcon");
 const closeIcon = document.querySelector(".closeIcon");
 const slider = document.querySelector('.items');
-const originalItems = [...slider.children];
+const originalItems = slider ? [...slider.children] : [];
 
 // Change speed slider here 
 let position = 0;
@@ -12,14 +12,14 @@ const speed = 1;
 // open phone menu function
 // ===============================
 function openPhoneMenu() {
-    phoneSideMenu.classList.add("active");
+    phoneSideMenu?.classList.add("active");
 }
 
 // ===============================
 // close phone menu function
 // ===============================
 function closePhoneMenu() {
-    phoneSideMenu.classList.remove("active");
+    phoneSideMenu?.classList.remove("active");
 }
 
 // ==========================================
@@ -33,6 +33,10 @@ originalItems.forEach(item => {
 // infinite loop slider function
 // ==========================================
 function animateSlider() {
+    if (!slider || !slider.children.length) {
+        return;
+    }
+
     position -= speed;
 
     const firstItem = slider.children[0];
@@ -56,6 +60,10 @@ function animateSlider() {
 // ============================================
 function serviceAccordance() {
     const items = document.querySelectorAll(".serviceAccordance .item");
+
+    if (!items.length) {
+        return;
+    }
 
     items[0].classList.add("active");
 
@@ -339,12 +347,14 @@ function serviceAreasMap() {
 // ===============================
 // all function all here
 // ===============================
-menuIcon.addEventListener("click", openPhoneMenu);
-closeIcon.addEventListener("click", closePhoneMenu);
+menuIcon?.addEventListener("click", openPhoneMenu);
+closeIcon?.addEventListener("click", closePhoneMenu);
 document.querySelectorAll(".phoneSideMenu ul li a").forEach((link) => {
     link.addEventListener("click", closePhoneMenu);
 });
-animateSlider();
+if (slider) {
+    animateSlider();
+}
 serviceAccordance();
 faqAccordance();
 whySentrysliderAnimation();
