@@ -1,4 +1,406 @@
 /* ===================================================================================================================== */
+/* Service Hero Section */
+/* ===================================================================================================================== */
+section.heroSection {
+    padding: 80px 20px;
+}
+
+section.heroSection .heroContainer {
+    max-width: 1296px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+section.heroSection .heroContainer .topSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.heroSection .heroContainer .topSection .heading-line {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+}
+
+section.heroSection .heroContainer .topSection .heading-line .line {
+    height: 1px;
+    width: 100%;
+    background: #DFE1E7;
+    flex: 1;
+}
+
+section.heroSection .heroContainer .topSection .heading-line h4 {
+    color: #4A4C56;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.18px;
+    border-radius: 80px;
+    border: 1px solid #ECEFF3;
+    padding: 12px 16px 12px 30px;
+    position: relative;
+}
+
+section.heroSection .heroContainer .topSection .heading-line h4::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    height: 8px;
+    width: 8px;
+    background: #4A4C56;
+    border-radius: 50%;
+}
+
+section.heroSection .heroContainer .topSection h3 {
+    color: #1F3D2B;
+    text-align: center;
+    font-family: "Archivo Black";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -1px;
+    max-width: 748px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+section.heroSection .heroContainer .topSection p {
+    color: #4A4C56;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    max-width: 674px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+section.heroSection .heroContainer .topSection .buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+
+section.heroSection .heroContainer .quoteBtn {
+    display: inline-flex;
+    align-items: center;
+    height: 44px;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -0.64px;
+    color: var(--white);
+}
+
+section.heroSection .heroContainer .quoteBtn .quoteBtnLabel {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    background: var(--light-green);
+    border-radius: 40px;
+}
+
+section.heroSection .heroContainer .quoteBtn .quoteBtnArrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    margin-left: -2px;
+    background: var(--light-green);
+    border-radius: 50%;
+}
+
+section.heroSection .heroContainer .quoteBtn .quoteBtnArrow img {
+    display: block;
+    width: 12px;
+    height: 12px;
+}
+
+section.heroSection .heroContainer .phoneButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--green);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+section.heroSection .heroContainer .phoneButton img {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+section.heroSection .heroContainer .bottomSection {
+    width: 100%;
+    border-radius: 32px;
+    overflow: hidden;
+    background: url("../assets/service-page-hero.jpg") no-repeat center center;
+    background-size: cover;
+    height: 780px;
+    display: flex;
+    align-items: end;
+}
+
+section.heroSection .heroContainer .bottomSection .heroContent {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 0px 20px 0px 0px;
+    background: var(--white);
+    max-width: 908px;
+    width: 100%;
+    position: relative;
+}
+
+section.heroSection .heroContainer .bottomSection .heroContent::after {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background:transparent;
+    bottom: 0;
+    right: 0;
+    transform: translateX(100%);
+    border-radius: 0px 0px 0px 32px;
+    box-shadow: -8px 12px 2px white;
+}
+
+section.heroSection .heroContainer .bottomSection .heroContent::before {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background:transparent;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    border-radius: 0px 0px 0px 32px;
+    box-shadow: -15px 6px 2px white;
+}
+
+section.heroSection .heroContainer .bottomSection .heroContent button {
+    color: #1F3D2B;
+    font-family: "Archivo Black";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 110%;
+    padding: 16px;
+    border-radius: 16px;
+    border: none;
+    outline: none;
+    text-align: left;
+}
+
+section.heroSection .heroContainer .phoneHeroContent {
+    display: none;
+}
+
+@media screen and (max-width: 1060px) {
+    section.heroSection {
+        padding: 60px 20px;
+    }
+
+    section.heroSection .heroContainer .topSection h3 {
+        font-size: 42px;
+    }
+
+    section.heroSection .heroContainer .topSection p {
+        font-size: 16px;
+    }
+
+    section.heroSection .heroContainer .bottomSection {
+        height: 550px;
+    }
+
+    section.heroSection .heroContainer .bottomSection .heroContent {
+        max-width: 700px;
+    }
+
+    section.heroSection .heroContainer .bottomSection .heroContent button {
+        font-size: 12px;
+        padding: 12px;
+        border-radius: 10px;
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+    section.heroSection .heroContainer .topSection .heading-line {
+        gap: 4px;
+    }
+
+    section.heroSection .heroContainer .topSection .heading-line h4 {
+        font-size: 14px;
+        padding: 9px 8px 9px 22px;
+
+    }
+
+    section.heroSection .heroContainer .topSection .heading-line h4::after {
+        left: 8px;
+        height: 6px;
+        width: 6px;
+    }
+
+    section.heroSection .heroContainer .topSection h3 {
+        font-size: 24px;
+        max-width: 357px;
+        margin-top: 8px;
+    }
+
+    section.heroSection .heroContainer .topSection p {
+        font-size: 14px;
+        max-width: 353px;
+    }
+
+    section.heroSection .heroContainer .topSection .buttons {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    section.heroSection .heroContainer .quoteBtn {
+        font-size: 14px;
+        height: 40px;
+        margin-top: 0px;
+    }
+
+    section.heroSection .heroContainer .quoteBtn p {
+        padding: 0px 16px;
+    }
+
+    section.heroSection .heroContainer .quoteBtn .quoteBtnArrow {
+        width: 40px;
+    }
+
+    section.heroSection .heroContainer .bottomSection {
+        height: 400px;
+        border-radius: 20px;
+    }
+
+    section.heroSection .heroContainer .bottomSection .heroContent {
+        max-width: 500px;
+        border-radius: 0px 10px 0px 0px;
+    }
+
+    section.heroSection .heroContainer .bottomSection .heroContent::after {
+        border-radius: 0px 0px 0px 20px;
+    }
+
+    section.heroSection .heroContainer .bottomSection .heroContent::before {
+        border-radius: 0px 0px 0px 20px;
+    }
+
+    section.heroSection .heroContainer .bottomSection .heroContent button {
+        font-size: 8px;
+        padding: 6px;
+        border-radius: 8px;
+    }
+}
+
+
+
+@media screen and (max-width: 580px) {
+    section.heroSection {
+        padding: 40px 20px 0px 20px;
+    }
+
+    section.heroSection .heroContainer {
+        gap: 24px;
+    }
+
+    section.heroSection .heroContainer .bottomSection {
+        height: 212.45px;
+        border-radius: 9px;
+    }
+
+    section.heroSection .heroContainer .bottomSection .heroContent {
+        display: none;
+    }
+
+    section.heroSection .heroContainer .phoneHeroContent {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px;
+        border-radius: 16px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        background: rgba(255, 255, 255, 0.30);
+        align-items: center;
+        align-content: center;
+        width: 100%;
+    }
+
+    section.heroSection .heroContainer .phoneHeroContent button {
+        color: #1F3D2B;
+        font-family: "Archivo Black";
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 110%;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        flex-shrink: 0;
+        text-align: left;
+        border-radius: 8px;
+        border: 1px solid #ECEFF3;
+        background: #FFF;
+        box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.06);
+        outline: none;
+    }
+
+    section.heroSection .heroContainer .phoneHeroContent button:nth-child(1) {
+        color: #FFF;
+        width: 103px;
+        border-color: #1F3D2B;
+        background: #1F3D2B;
+    }
+
+    section.heroSection .heroContainer .phoneHeroContent button:nth-child(2) {
+        width: 124px;
+    }
+
+    section.heroSection .heroContainer .phoneHeroContent button:nth-child(3) {
+        width: 91px;
+    }
+
+    section.heroSection .heroContainer .phoneHeroContent button:nth-child(4) {
+        width: 136px;
+    }
+
+    section.heroSection .heroContainer .phoneHeroContent button:nth-child(5) {
+        width: 150px;
+    }
+}
+
+
+
+
+
+
+
+
+/* ===================================================================================================================== */
 /* Service Areas Section */
 /* ===================================================================================================================== */
 section.areasSlider {
@@ -7,7 +409,7 @@ section.areasSlider {
 }
 
 section.areasSlider .areaSliderContainer {
-    max-width: 1393px;
+    max-width: 1296px;
     width: 100%;
     margin: 0 auto;
 }
@@ -136,6 +538,379 @@ section.areasSlider .areaSliderContainer .slider-container .item h1 {
 
 
 
+/* ===================================================================================================================== */
+/* What's Included Section Service Page */
+/* ===================================================================================================================== */
+
+section.what_included {
+    padding: 80px 20px;
+}
+
+section.what_included .what_includedContainer {
+    max-width: 1296px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+section.what_included .what_includedTop {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+section.what_included .what_includedHeading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+section.what_included .what_includedLabel {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    padding: 12px 16px;
+    border: 1px solid #ECEFF3;
+    border-radius: 80px;
+    color: #4A4C56;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.18px;
+    white-space: nowrap;
+}
+
+section.what_included .what_includedLabel span:first-child {
+    line-height: 1;
+}
+
+section.what_included .what_includedHeading .line {
+    width: 100%;
+    height: 1px;
+    background: #DFE1E7;
+    flex: 1;
+}
+
+section.what_included .what_includedIntro {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 48px;
+}
+
+section.what_included .what_includedIntro h1 {
+    max-width: 611px;
+    width: 100%;
+    color: #1F3D2B;
+    font-family: "Archivo Black";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -1px;
+}
+
+section.what_included .what_includedIntro p {
+    max-width: 473px;
+    width: 100%;
+    color: #4A4C56;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+section.what_included .what_includedBody {
+    display: flex; 
+    gap: 48px;
+}
+
+section.what_included .what_includedVisual {
+    flex: 1 1 0;
+    overflow: hidden;
+    border-radius: 20px;
+    background: url("../assets/service_page_why_sentry.jpg") center center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: start;
+}
+
+section.what_included .what_includedVisual .what_included_shap {
+    width: 310px;
+    height: 58px;
+    background: var(--white);
+    border-radius: 0px 0px 20px 0px;
+    position: relative;
+}
+
+section.what_included .what_includedVisual .what_included_shap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    transform: translateX(100%);
+    border-radius: 20px 0px 0px 0px;
+    box-shadow: -10px -10px 1px var(--white);
+}
+
+section.what_included .what_includedVisual .what_included_shap::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    transform: translateY(100%);
+    border-radius: 20px 0px 0px 0px;
+    box-shadow: -10px -10px 1px var(--white);
+}
+
+section.what_included .what_includedCta {
+    display: inline-flex;
+    align-items: center;
+    height: 44px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.64px;
+}
+
+section.what_included .what_includedCta > span:first-child {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    background: #5E8C3A;
+    border-radius: 40px;
+    white-space: nowrap;
+}
+
+section.what_included .what_includedCtaArrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-left: -2px;
+    background: #5E8C3A;
+    border-radius: 50%;
+}
+
+section.what_included .what_includedCtaArrow img {
+    display: block;
+    width: 12px;
+    height: 12px;
+}
+
+section.what_included .what_includedList {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+section.what_included .what_includedItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 0 0 12px;
+}
+
+section.what_included .what_includedItem + .what_includedItem {
+    padding-top: 12px;
+    border-top: 1px solid #ECEFF3;
+}
+
+section.what_included .what_includedItem > img {
+    display: block;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+}
+
+section.what_included .what_includedItem > div {
+    min-width: 0;
+}
+
+section.what_included .what_includedItem h3 {
+    color: #1F3D2B;
+    font-family: "Archivo Black";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+section.what_included .what_includedItem p {
+    margin-top: 4px;
+    color: #4A4C56;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: -1px;
+}
+
+@media screen and (max-width: 1180px) {
+    section.what_included .what_includedIntro h1 {
+        max-width: 500px;
+        font-size: 38px;
+    }
+
+    section.what_included .what_includedIntro p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    section.what_included {
+        padding: 60px 20px;
+    }
+
+    section.what_included .what_includedContainer {
+        gap: 32px;
+    }
+
+    section.what_included .what_includedTop {
+        gap: 16px;
+    }
+
+    section.what_included .what_includedIntro h1 {
+        font-size: 34px;
+    }
+
+    section.what_included .what_includedIntro p {
+        font-size: 14px;
+    }
+
+    section.what_included .what_includedBody {
+        gap: 32px;
+    }
+
+    section.what_included .what_includedItem p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    section.what_included {
+        padding: 40px 20px;
+    }
+
+    section.what_included .what_includedContainer {
+        gap: 24px;
+    }
+
+    section.what_included .what_includedTop {
+        gap: 8px;
+    }
+
+    section.what_included .what_includedHeading {
+        gap: 8px;
+    }
+
+    section.what_included .what_includedLabel {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    section.what_included .what_includedLabel span:first-child {
+        font-size: 18px;
+    }
+
+    section.what_included .what_includedIntro {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    section.what_included .what_includedIntro h1 {
+        max-width: 500px;
+        font-size: 24px;
+    }
+
+    section.what_included .what_includedIntro p {
+        max-width: 500px;
+        font-size: 14px;
+    }
+
+    section.what_included .what_includedBody {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    section.what_included .what_includedList {
+        width: 100%;
+    }
+
+    section.what_included .what_includedVisual {
+        flex: none;
+        width: 100%;
+        border-radius: 12px;
+        height: 400px;
+        order: 2;
+    }
+
+    section.what_included .what_includedVisual .what_included_shap {
+        width: 270px;
+        height: 48px;
+    }
+
+    section.what_included .what_includedVisual .what_included_shap::after {
+        box-shadow: -8px -10px 1px var(--white);
+    }
+
+    section.what_included .what_includedVisual .what_included_shap::before {
+        box-shadow: -8px -6px 1px var(--white);
+    }
+
+    section.what_included .what_includedCta {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    section.what_included .what_includedCta > span:first-child {
+        padding: 0 16px;
+    }
+
+    section.what_included .what_includedCtaArrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    section.what_included .what_includedItem > img {
+        flex-basis: 24px;
+        width: 24px;
+        height: 24px;
+    }
+
+    section.what_included .what_includedItem h3 {
+        font-size: 16px;
+    }
+
+    section.what_included .what_includedItem p {
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -145,8 +920,7 @@ section.areasSlider .areaSliderContainer .slider-container .item h1 {
 /* Why Sentry Section */
 /* ===================================================================================================================== */
 section.why_sentry {
-    padding: 0px 20px;
-    margin-top: 160px;
+    padding: 80px 20px;
 }
 
 section.why_sentry .why_sentryContainer {
@@ -320,7 +1094,7 @@ section.why_sentry .why_sentryContainer .sliderContainer .buttonGroup {
 
 @media screen and (max-width: 1260px) {
     section.why_sentry {
-        margin-top: 140px;
+       padding: 60px 20px;
     }
 
     section.why_sentry .why_sentryContainer .topPart h1 {
@@ -332,10 +1106,6 @@ section.why_sentry .why_sentryContainer .sliderContainer .buttonGroup {
 
 
 @media screen and (max-width: 1060px) {
-    section.why_sentry {
-        margin-top: 100px;
-    }
-
     section.why_sentry .why_sentryContainer .topPart h1 {
         font-size: 28px;
         max-width: 322px;
