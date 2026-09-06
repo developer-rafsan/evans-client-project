@@ -241,9 +241,6 @@ section.heroSection .heroContainer .phoneHeroContent {
         border-radius: 10px;
     }
 }
-
-
-
 @media screen and (max-width: 800px) {
     section.heroSection .heroContainer .topSection .heading-line {
         gap: 4px;
@@ -315,7 +312,6 @@ section.heroSection .heroContainer .phoneHeroContent {
         border-radius: 8px;
     }
 }
-
 
 
 @media screen and (max-width: 580px) {
@@ -920,7 +916,7 @@ section.what_included .what_includedItem p {
 /* Why Sentry Section */
 /* ===================================================================================================================== */
 section.why_sentry {
-    padding: 80px 20px;
+    padding: 0px 20px;
 }
 
 section.why_sentry .why_sentryContainer {
@@ -1090,11 +1086,15 @@ section.why_sentry .why_sentryContainer .sliderContainer .buttonGroup {
     display: none;
 }
 
+section.why_sentry .short_call_to_action {
+    background: #5E8C3A;
+}
+
 
 
 @media screen and (max-width: 1260px) {
     section.why_sentry {
-       padding: 60px 20px;
+       padding: 0px 20px;
     }
 
     section.why_sentry .why_sentryContainer .topPart h1 {
@@ -1191,6 +1191,205 @@ section.why_sentry .why_sentryContainer .sliderContainer .buttonGroup {
 
     section.why_sentry .why_sentryContainer .sliderContainer .buttonGroup button {
         all: unset;
+    }
+}
+
+
+
+/* ===================================================================================================================== */
+/* Why Sentry Short CTA - Figma node 10330:4699 */
+/* ===================================================================================================================== */
+section.why_sentry .why_sentryShortCta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    width: 100%;
+    margin-top: 80px;
+    padding: 48px;
+    border-radius: 32px;
+    background: #5E8C3A;
+}
+
+section.why_sentry .why_sentryShortCtaContent {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 662px;
+    min-width: 0;
+}
+
+section.why_sentry .why_sentryShortCtaContent h2 {
+    color: #FFF;
+    font-family: "Archivo Black";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -1px;
+}
+
+section.why_sentry .why_sentryShortCtaContent p {
+    color: #E9E9EA;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+section.why_sentry .why_sentryShortCtaActions {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 16px;
+}
+
+section.why_sentry .why_sentryShortCtaButton {
+    display: inline-flex;
+    align-items: center;
+    height: 44px;
+    color: #1F3D2B;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.64px;
+    white-space: nowrap;
+}
+
+section.why_sentry .why_sentryShortCtaButton > span:first-child,
+section.why_sentry .why_sentryShortCtaArrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    background: #FFF;
+}
+
+section.why_sentry .why_sentryShortCtaButton > span:first-child {
+    padding: 0 20px;
+    border-radius: 40px;
+}
+
+section.why_sentry .why_sentryShortCtaArrow {
+    width: 44px;
+    margin-left: -2px;
+    border-radius: 50%;
+}
+
+section.why_sentry .why_sentryShortCtaArrow img {
+    display: block;
+    width: 12px;
+    height: 12px;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(12%) saturate(1046%) hue-rotate(91deg) brightness(89%) contrast(89%);
+}
+
+section.why_sentry .why_sentryShortCtaPhone {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+section.why_sentry .why_sentryShortCtaPhone img {
+    display: block;
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+@media screen and (max-width: 1060px) {
+    section.why_sentry .why_sentryShortCta {
+        padding: 40px;
+    }
+
+    section.why_sentry .why_sentryShortCtaContent h2 {
+        font-size: 38px;
+    }
+
+    section.why_sentry .why_sentryShortCtaContent p,
+    section.why_sentry .why_sentryShortCtaPhone {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    section.why_sentry .why_sentryShortCta {
+        margin-top: 48px;
+        padding: 32px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        border-radius: 24px;
+    }
+
+    section.why_sentry .why_sentryShortCtaContent {
+        gap: 12px;
+    }
+
+    section.why_sentry .why_sentryShortCtaContent h2 {
+        font-size: 30px;
+    }
+
+    section.why_sentry .why_sentryShortCtaContent p {
+        font-size: 14px;
+    }
+
+    section.why_sentry .why_sentryShortCtaActions {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    section.why_sentry .why_sentryShortCta {
+        gap: 16px;
+        padding: 20px 16px;
+        border-radius: 16px;
+    }
+
+    section.why_sentry .why_sentryShortCtaContent {
+        gap: 16px;
+    }
+
+    section.why_sentry .why_sentryShortCtaContent h2 {
+        font-size: 24px;
+    }
+
+    section.why_sentry .why_sentryShortCtaActions {
+        width: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    section.why_sentry .why_sentryShortCtaButton {
+        height: 40px;
+        font-size: 14px;
+        letter-spacing: -0.56px;
+    }
+
+    section.why_sentry .why_sentryShortCtaButton > span:first-child,
+    section.why_sentry .why_sentryShortCtaArrow {
+        height: 40px;
+    }
+
+    section.why_sentry .why_sentryShortCtaButton > span:first-child {
+        padding: 0 16px;
+    }
+
+    section.why_sentry .why_sentryShortCtaArrow {
+        width: 40px;
+    }
+
+    section.why_sentry .why_sentryShortCtaPhone {
+        font-size: 16px;
     }
 }
 
