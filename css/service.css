@@ -363,6 +363,8 @@ section.heroSection .heroContainer .phoneHeroContent {
         background: #FFF;
         box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.06);
         outline: none;
+        min-width: 120px;
+        flex: 1;
     }
 
     section.heroSection .heroContainer .phoneHeroContent button:nth-child(1) {
@@ -2703,5 +2705,53 @@ section.callToAction .callContactArrow img {
 
     section.callToAction .callToActionContainer .shapContainer .shapContainerParagraph {
         font-size: 14px;
+    }
+}
+
+/* Service page section spacing aligned with the desktop and phone Figma frames. */
+@media screen and (min-width: 1161px) {
+    section.areasSlider {
+        margin-top: 0;
+    }
+
+    section.why_sentry {
+        padding: 80px 20px 160px;
+    }
+
+    section.why_sentry .why_sentryShortCta {
+        margin-top: 32px;
+    }
+
+    section.review {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    section.what_included {
+        margin-top: 8px;
+    }
+
+    section.why_sentry {
+        margin-top: 64px;
+        padding: 0 20px;
+    }
+
+    section.why_sentry .why_sentryShortCta {
+        margin-top: 24px;
+    }
+
+    section.review {
+        margin-top: 64px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    section.callToAction {
+        margin-top: 64px;
+    }
+
+    body > footer {
+        margin-top: 13px;
     }
 }
