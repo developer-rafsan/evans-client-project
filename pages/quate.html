@@ -4,9 +4,404 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLC - Get a Quote</title>
-</head>
-<body>
+    <title>Sentry - Landscaping LLC</title>
 
+    <!-- include css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/quate.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+
+<body>
+    <!-- ************************ -->
+    <!-- Header -->
+    <!-- ************************ -->
+    <header>
+        <div class="headerContainer">
+            <div class="leftSite">
+                <div class="logo" id="logo">
+                    <a href="../index.html">
+                        <img src="../assets/logo.png" alt="Sentry Landscaping LLC Logo">
+                    </a>
+                </div>
+                <div class="headerMenu" id="headerMenu">
+                    <ul>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="../index.html#why-sentry">Why Sentry</a></li>
+                        <li><a href="../index.html#testimonial">Testimonial</a></li>
+                        <li><a href="location.html">Areas served</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rightSite">
+                <a href="tel:+18458004783" class="number">
+                    <img src="../assets/icons/phone.svg" alt="Phone Icon">
+                    <p>(845) 800-4783</p>
+                </a>
+
+                <a href="quate.html" class="quoteBtn" id="quoteBtn">
+                    <p>Request a Quote</p>
+                    <span class="quoteBtnArrow">
+                        <img src="../assets/icons/arrow-up-right.svg" alt="Arrow Up Right Icon">
+                    </span>
+                </a>
+
+                <button class="menuIcon">
+                    <img src="../assets/icons/menu.svg" alt="Menu Icon">
+                </button>
+            </div>
+        </div>
+
+        <!-- phone responsive menu -->
+        <div class="phoneSideMenu" id="phoneSideMenu">
+            <div class="phoneMenuContainer">
+                <div class="phoneMenuHeader">
+                    <button class="closeIcon" id="closeIcon">
+                        <img src="../assets/icons/arrow-close.svg" alt="Close Icon">
+                    </button>
+
+                    <div class="logo" id="logo">
+                        <a href="../index.html">
+                            <img src="../assets/logo.png" alt="Sentry Landscaping LLC Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="phoneMenuBody">
+                    <ul>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="../index.html#why-sentry">Why Sentry</a></li>
+                        <li><a href="../index.html#testimonial">Testimonial</a></li>
+                        <li><a href="location.html">Areas served</a></li>
+                        <li><a href="quate.html">Request a Quote</a></li>
+                        <li><a href="tel:+18458004783">(845) 800-4783</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ************************ -->
+    <!-- Quote Hero -->
+    <!-- ************************ -->
+    <main>
+        <section class="quoteIntro" aria-labelledby="quote-page-title">
+            <div class="quoteIntroContainer">
+                <div class="quoteIntroEyebrow">
+                    <img src="../assets/icons/quote-divider.svg" alt="">
+                    <span><b aria-hidden="true">•</b> Request a Quote</span>
+                    <img src="../assets/icons/quote-divider.svg" alt="">
+                </div>
+                <h1 id="quote-page-title">Tell us how we can help<br class="quoteIntroBreak"> with your property</h1>
+                <p>Share a few details about your property and the service you need. We'll review your request and get
+                    in touch to discuss the next steps.</p>
+            </div>
+        </section>
+
+        <section class="quoteRequest" aria-labelledby="quote-form-title">
+            <div class="quoteRequestLayout">
+                <form class="quoteFormCard" action="#" method="post">
+                    <h2 id="quote-form-title">Request your quote</h2>
+                    <div class="quoteFormFields">
+                        <div class="quoteField">
+                            <label for="full-name">Full Name</label>
+                            <input id="full-name" name="fullName" type="text" placeholder="Your full name"
+                                autocomplete="name">
+                        </div>
+                        <div class="quoteField">
+                            <label for="phone-number">Phone Number</label>
+                            <input id="phone-number" name="phone" type="tel" placeholder="(845) 000 0000"
+                                autocomplete="tel">
+                        </div>
+                        <div class="quoteField">
+                            <label for="property-location">Property Location</label>
+                            <input id="property-location" name="propertyLocation" type="text"
+                                placeholder="Write company name" autocomplete="street-address">
+                        </div>
+                        <div class="quoteField">
+                            <label for="service-needed">Service Needed<span aria-hidden="true">*</span></label>
+                            <div class="quoteSelectWrap">
+                                <select id="service-needed" name="serviceNeeded" required>
+                                    <option value="" selected disabled>Select country</option>
+                                    <option>Property Maintenance</option>
+                                    <option>Lawn, Hedge &amp; Landscape Care</option>
+                                    <option>Mulch, Rock Beds &amp; Planting Areas</option>
+                                    <option>Property Cleanups &amp; Pressure Washing</option>
+                                    <option>Excavation &amp; Drainage</option>
+                                </select>
+                                <img src="../assets/icons/quote-select-chevron.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="quoteField quoteFieldFull">
+                            <label for="project-details">Project Details <small>(optional)</small></label>
+                            <textarea id="project-details" name="projectDetails"
+                                placeholder="Tell us briefly what you need help with..."></textarea>
+                        </div>
+                    </div>
+                    <button class="quoteSubmit" type="submit">Request My Quote</button>
+                </form>
+
+                <aside class="quoteSidebar" aria-label="Contact information and benefits">
+                    <div class="quoteContactCard">
+                        <p class="quoteContactEyebrow">Prefer to talk?</p>
+                        <div class="quoteContactCopy">
+                            <h2>Rather call or text us?</h2>
+                            <p>Reach out directly and tell us what your property needs.</p>
+                        </div>
+                        <p class="quoteContactNumber">(845) 800-4783</p>
+                        <div class="quoteContactActions">
+                            <a class="quoteAction quoteActionPrimary" href="tel:+18458004783"><span
+                                    class="quoteActionLabel">Call Now</span><span aria-hidden="true"><img
+                                        src="../assets/icons/arrow-up-right.svg" alt=""></span></a>
+                            <a class="quoteAction quoteActionSecondary" href="sms:+18458004783"><span
+                                    class="quoteActionLabel">Text Us</span><span aria-hidden="true"><img
+                                        src="../assets/icons/arrow-up-right.svg" alt=""></span></a>
+                        </div>
+                    </div>
+
+                    <div class="quoteBenefitsCard">
+                        <h2>Why contact Sentry</h2>
+                        <div class="quoteBenefit">
+                            <img src="../assets/icons/quote-google.svg" alt="">
+                            <div>
+                                <h3>Google Reviews</h3>
+                                <p>See what local property owners say about working with Sentry.</p>
+                            </div>
+                        </div>
+                        <div class="quoteBenefit">
+                            <img src="../assets/icons/quote-star.svg" alt="">
+                            <div>
+                                <h3>First Responder &amp; Military Discounts</h3>
+                                <p>Ask about available discounts when requesting your quote.</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ************************ -->
+    <!-- Why Sentry Section -->
+    <!-- ************************ -->
+    <section class="why_sentry" id="why-sentry">
+        <div class="why_sentryContainer">
+            <ul class="heading">
+                <li>Why Sentry</li>
+                <div class="line"></div>
+            </ul>
+            <div class="topPart">
+                <h1>Why do local property owners trust Sentry.</h1>
+                <p>Sentry earns local trust through reliable service, honest communication, consistent quality, and
+                    close attention to every property.</p>
+                <div class="buttonGroup">
+                    <button class="whySentryPrev" aria-label="Previous slide">
+                        <img src="../assets/icons/left-arrow-slider.svg" alt="">
+                    </button>
+                    <button class="whySentryNext" aria-label="Next slide">
+                        <img src="../assets/icons/right-arrow-slider.svg" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="sliderContainer swiper">
+                <div class="sliders swiper-wrapper">
+                    <div class="slider swiper-slide">
+                        <div class="sliderCardShap">
+                            <h1>Attention to Detail</h1>
+                            <p>Edges, corners, and finish work get the same care as the obvious areas.</p>
+                        </div>
+
+                        <img src="../assets/sentry-icons/1.png" alt="sentry icons">
+                    </div>
+                    <div class="slider swiper-slide">
+                        <div class="sliderCardShap">
+                            <h1>Attention to Detail</h1>
+                            <p>Edges, corners, and finish work get the same care as the obvious areas.</p>
+                        </div>
+
+                        <img src="../assets/sentry-icons/1.png" alt="sentry icons">
+                    </div>
+                    <div class="slider swiper-slide">
+                        <div class="sliderCardShap">
+                            <h1>Attention to Detail</h1>
+                            <p>Edges, corners, and finish work get the same care as the obvious areas.</p>
+                        </div>
+
+                        <img src="../assets/sentry-icons/1.png" alt="sentry icons">
+                    </div>
+                    <div class="slider swiper-slide">
+                        <div class="sliderCardShap">
+                            <h1>Attention to Detail</h1>
+                            <p>Edges, corners, and finish work get the same care as the obvious areas.</p>
+                        </div>
+
+                        <img src="../assets/sentry-icons/1.png" alt="sentry icons">
+                    </div>
+                    <div class="slider swiper-slide">
+                        <div class="sliderCardShap">
+                            <h1>Attention to Detail</h1>
+                            <p>Edges, corners, and finish work get the same care as the obvious areas.</p>
+                        </div>
+
+                        <img src="../assets/sentry-icons/1.png" alt="sentry icons">
+                    </div>
+                </div>
+
+                <div class="buttonGroup">
+                    <button class="whySentryPrev" aria-label="Previous slide">
+                        <img src="../assets/icons/left-arrow-slider.svg" alt="">
+                    </button>
+                    <button class="whySentryNext" aria-label="Next slide">
+                        <img src="../assets/icons/right-arrow-slider.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ************************ -->
+    <!-- Call to action -->
+    <!-- ************************ -->
+    <section class="callToAction">
+        <div class="callToActionContainer">
+            <div class="shapContainer">
+                <h3>Ready to give </h3>
+                <h3>your property the care it deserves?</h3>
+                <div class="shapContainerParagraph">
+                    <p>Sentry will review your request and contact you to discuss the next steps.</p>
+                </div>
+                <a class="callContactButton" href="quate.html">
+                    <span>Request a Quote</span>
+                    <span class="callContactArrow" aria-hidden="true">
+                        <img src="../assets/icons/arrow-up-right.svg" alt="">
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- ************************ -->
+    <!-- Footer Section -->
+    <!-- ************************ -->
+    <footer>
+        <div class="footerContainer">
+            <div class="topPart">
+                <div class="leftSite">
+                    <img src="../assets/logo-white.png" alt="Sentry Landscaping">
+                    <p>Sentry Landscaping LLC provides professional landscaping and property maintenance for homes,
+                        businesses, Airbnb properties, and large properties across selected communities in Sullivan and
+                        Orange Counties, New York.</p>
+                </div>
+
+                <div class="footerRight">
+                    <div class="quickLinks linkContainer">
+                        <h5>Quick Links</h5>
+                        <a href="service.html">Services</a>
+                        <a href="../index.html#why-sentry">Why Sentry</a>
+                        <a href="../index.html#testimonial">Reviews</a>
+                        <a href="location.html">Areas we serve</a>
+                    </div>
+                    <div class="serviceAreas linkContainer">
+                        <h5>Service Areas</h5>
+                        <a href="location.html">Bloomingburg, NY</a>
+                        <a href="location.html">Wurtsboro, NY</a>
+                        <a href="location.html">Fair Oaks, NY</a>
+                        <a href="location.html">Rock Hill, NY</a>
+                    </div>
+                    <div class="Contact linkContainer">
+                        <h5>Contact</h5>
+                        <a href="location.html">
+                            <img src="../assets/icons/footer/location-01.svg" alt=""><span>1234 Street Name, City,
+                                Country</span></a>
+                        <a href="tel:+18458004783"><img src="../assets/icons/footer/call.svg" alt=""><span>(845)
+                                800-4783</span></a>
+                        <a href="mailto:info@sentry.com"><img src="../assets/icons/footer/mail-02.svg"
+                                alt=""><span>info@sentry.com</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottomPart">
+                <ul>
+                    <li>All Rights Reserved ©2023 Sentry</li>
+                    <li><a href="general.html">Privacy Policy</a></li>
+                    <li><a href="general.html">Terms of Service</a></li>
+                </ul>
+
+                <ul class="socialIcons">
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img
+                                src="../assets/social-icon/facebook.svg" alt="Facebook"></a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer"><img
+                                src="../assets/social-icon/x.svg" alt="Twitter"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><img
+                                src="../assets/social-icon/linkedin.svg" alt="LinkedIn"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img
+                                src="../assets/social-icon/instagram.svg" alt="Instagram"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- include js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/main.js"></script>
 </body>
+
 </html>

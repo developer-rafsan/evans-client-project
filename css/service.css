@@ -6,7 +6,7 @@ section.heroSection {
 }
 
 section.heroSection .heroContainer {
-    max-width: 1296px;
+    max-width: 1393px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -407,7 +407,7 @@ section.areasSlider {
 }
 
 section.areasSlider .areaSliderContainer {
-    max-width: 1296px;
+    max-width: 1393px;
     width: 100%;
     margin: 0 auto;
 }
@@ -545,7 +545,7 @@ section.what_included {
 }
 
 section.what_included .what_includedContainer {
-    max-width: 1296px;
+    max-width: 1393px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -922,7 +922,7 @@ section.why_sentry {
 }
 
 section.why_sentry .why_sentryContainer {
-    max-width: 1296px;
+    max-width: 1393px;
     width: 100%;
     margin: 0 auto;
 }
