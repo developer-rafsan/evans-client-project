@@ -330,7 +330,7 @@ section.ourApproach {
 
 
 section.ourApproach .ourApproachContainer {
-    max-width: 1440px;
+    max-width: 1393px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -887,7 +887,7 @@ section.ourCommitment {
 }
 
 section.ourCommitment .ourCommitmentContainer {
-    max-width: 1440px;
+    max-width: 1393px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -906,7 +906,7 @@ section.ourCommitment .commitmentImage {
     min-width: 0;
     width: 100%;
     aspect-ratio: 624 / 606;
-    background: url("../assets/our-approach.png") top left / cover no-repeat;
+    background: url("../assets/ourCommitment.jpg") top left / cover no-repeat;
     border-radius: 20px;
 }
 
